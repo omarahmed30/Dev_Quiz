@@ -5,4 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Question.create(option_1:"Option 1",option_2:"Option 1",option_3:"Option 1",option_4:"Option 4",answer:2,difficulty:3, subject:"Ruby")
+Quiz.create(name:"Ruby Beginner", subject:"ruby")
+Question.create(option_1:"First Option", option_2:"Second Option", option_3:"Third Option", option_4:"Fourth Option", answer:5, subject:"Ruby", difficulty:2)
