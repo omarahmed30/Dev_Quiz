@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :quizzes
   resources :quiz_questions
   resources :user_questions
+
+
 end

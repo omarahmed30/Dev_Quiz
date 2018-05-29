@@ -3,6 +3,7 @@ class QuestionsController < ApplicationController
     end
 
     def show
+        redirect_to root
     end
 
     def new
@@ -18,5 +19,8 @@ class QuestionsController < ApplicationController
     end
 
     def destroy
+    end
+
+    def home
     end
 end
