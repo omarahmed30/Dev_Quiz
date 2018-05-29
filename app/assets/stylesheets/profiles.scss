@@ -1,3 +1,112 @@
 // Place all the styles related to the Profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background: linear-gradient(rgb(27, 29, 156), 
+      rgba(0, 0, 0, 0.356)), url(codes-coding-computer-247791.jpg);
+  height: 100%;
+  width: 100%;
+}
+.logo {
+  width: 80px;
+  height: 80px;
+}
+.nav {
+  background-color: #F5FCFD;
+  color: #1231B0;
+  height: 50px;
+  box-shadow: black 5px 5px 5px;
+  font-family: 'Exo', sans-serif;
+  /* font-family: 'Passion One', cursive; */
+  font-family: 'Teko', sans-serif;
+  font-size: 1.3em;
+  font-kerning: auto;
+}
+.nav-pills {
+  background-color: #1231B0;
+}
+.nav-link {
+  color: white;
+}
+.active {
+  background-color: #f7a523 !important;
+}
+main {
+  background-color: #F5FCFD;
+  width: 70%;
+  min-height: 600px;
+  align-self: center;
+  padding: 20px;
+}
+.profileimg {
+  width: 70%;
+  float: left;
+}
+.userinfo {
+  float: right;
+  text-align: left;
+  padding: 20px;
+  margin: 10px;
+  background-color: rgb(199, 200, 202);
+  font-size: 1.2em;
+  border-radius: 5px;
+  box-shadow: darkslategray 5px 5px 5px;  
+  font-family: 'Exo', sans-serif;
+}
+.quizofday {
+  float: right;
+  background-color: #1231B0;
+  color: white;
+  width: 80%;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.5em;
+  box-shadow: darkslategray 2px 2px 2px;
+  margin: 20px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+.quizofday:hover {
+  background-color: #f7a523;  
+  color: black;
+  box-shadow: darkslategray 5px 5px 5px;
+}
+.completequizzes {
+  font-size: 2em;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgb(49, 131, 207);
+  color: #f7a523;
+  border-radius: 5px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+h1 {
+  font-variant-caps: all-small-caps; 
+  text-align: center;
+  font-size: 5em;
+}
+.badgesimg {
+  width: 150px;
+  height: 150px;
+  align-self: center;
+  box-shadow: black 6px 6px 6px;
+}
+.badgesimg:hover {
+  box-shadow: #f7a523 3px 3px 3px;
+  transform: rotateZ(3deg);
+}
+footer {
+  background-color: #1231B0;
+  color: #f7a523;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  margin: 0px;
+  padding: 40px;
+  font-size: 1.5em;
+  float: right;
+  margin: 0px;
+  height: 250px;
+}
+.logofooter {
+  width: 200px;
+  float: left;
+}

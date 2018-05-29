@@ -1,36 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-
-<div class="container">
-  <h2>1) Can a single text link point to two different web pages?
-    </h2>
-  
-  <form>
-    <label class="radio-inline">
-      <input type="radio" name="optradio">Yes
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio">No
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio">Under Some Circumstances
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio">Only if it is html5
-    </label>
-    <%= link_to "Submit", questions_path(@question) %>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dev Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <% stylesheet_link_tag 'questions', media: 'all' %>
     
-  </form>
-</div>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+      crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=BenchNine:300|Exo:900|Marvel|Open+Sans+Condensed:300|Passion+One|Six+Caps|Teko:700|Text+Me+One|Yanone+Kaffeesatz:300"
+      rel="stylesheet">
 
-</body>
+  </head>
+  <body>
+    <nav>
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <%= image_tag "dev-quiz-logo.png",  class: "logo" %>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">DEV QUIZ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+      </ul>
+    </nav>
+
+    <% if signed_in? %>
+      Signed in as: <%= current_user.email %>
+      <%= button_to 'Sign out', sign_out_path, method: :delete %>
+    <% else %>
+      <%= link_to 'Sign in', sign_in_path %>
+    <% end %>
+
+    <div id="flash">
+      <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %></div>
+      <% end %>
+    </div>
+
+    
+    <div class="container">
+      <h2>1) Can a single text link point to two different web pages?
+        </h2>
+      
+      <form>
+        <ul>
+          <li>  
+            <label class="radio-inline">
+              <input type="radio" name="optradio"> Yes
+            </label>
+          </li>
+          <li>
+            <label class="radio-inline">
+              <input type="radio" name="optradio"> No
+            </label>
+          </li>
+          <li>
+            <label class="radio-inline">
+              <input type="radio" name="optradio"> Under Some Circumstances
+            </label>
+          </li>
+          <li>
+            <label class="radio-inline">
+              <input type="radio" name="optradio"> Only if it is html5
+            </label>
+          </li>
+            <%= link_to "Submit", questions_path(@question) %>
+        </ul>
+      </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <footer> 
+      <%= image_tag "dev-quiz-logo.png", class: "logofooter"%>
+      <p><strong>Take the Quiz, Ace the Interview. Repeat.</strong><br>
+      Dev Quiz is a web/mobile app designed for computer science majors and web developer bootcamp grads who are preparing for technical interviews. Created by New York Code &amp; Deisgn Academy Grads. Head to our <a href="">Dev Quiz Github</a> for all info.</p>
+    </footer>
+  </body>
 </html>
