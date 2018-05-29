@@ -20,7 +20,4 @@ class QuestionsController < ApplicationController
 
     def destroy
     end
-
-    def home
-    end
 end

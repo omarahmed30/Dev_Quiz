@@ -55,7 +55,7 @@
         <div class="flash <%= key %>"><%= value %></div>
       <% end %>
     </div>
-
+    <%= puts "whattup"%>
 
     <main class="container">
       <div class="container">
@@ -65,9 +65,9 @@
           </div>
           <div class="col userinfo">
             <p>USER INFO</p>
-            <p>Email Address: <%#  @users.email %></p>
-            <p>First Name: <%#  @users.first_name %></p>
-            <p>Last Name: <%#  @users.last_name %></p>
+            <p>Email Address: <%=  @user.email %></p>
+            <p>First Name: <%=  @profile.first_name %></p>
+            <p>Last Name: <%=  @profile.last_name %></p>
           </div>
         </div>
       </div>
