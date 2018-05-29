@@ -1,0 +1,3 @@
+class SplashPageController < ApplicationController
+
+end
