@@ -1,11 +1,10 @@
 class ProfilesController < ApplicationController
     def index
         @user = current_user
-        @profile = Profile.find(current_user.id)    end
+        @profile = Profile.find(current_user.id)    
+    end
 
     def show
-
-
     end
 
     def new
