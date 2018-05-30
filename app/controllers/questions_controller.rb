@@ -1,9 +1,11 @@
 class QuestionsController < ApplicationController
     def index
+			@questions = Question.all
     end
 
-    def show
-        redirect_to root
+		def show
+			@questions = Question.all
+			redirect_to root
     end
 
     def new

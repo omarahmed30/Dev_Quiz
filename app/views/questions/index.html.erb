@@ -6,7 +6,8 @@
     <title>Dev Quiz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <% stylesheet_link_tag 'questions', media: 'all' %>
-    
+    <%= javascript_include_tag 'questions', 'data-turbolinks-track': 'reload'%>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
       crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
@@ -59,6 +60,10 @@
     
     <div class="container">
       <h2>1) Can a single text link point to two different web pages?
+      <% @questions.each do |question|%>
+      <%= "subject: #{question.subject}" %>
+      <%= "Question 1: #{question.difficulty}" %>
+      <% end %>
         </h2>
       
       <form>
@@ -83,18 +88,31 @@
               <input type="radio" name="optradio"> Only if it is html5
             </label>
           </li>
-            <%= link_to "Submit", questions_path(@question) %>
+            <button onClick="myTimer = setInterval(myCounter, 1000)"><%= link_to "Submit", questions_path(@question) %></button>
         </ul>
       </form>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"></script>
+
+    <div class="clock"><button onClick="myTimer = setInterval(myCounter, 1000)">Start counter!</button>
+    <p id="demo">Click on the button above and I will count forever.</p>
+    <button onClick="clearInterval(myTimer)">Stop counter!</button>
+    <script>
+    var c = 0;
+    function myCounter() {
+        document.getElementById("demo").innerHTML = ++c;
+    }
+    </script>
+    </div>  
+
     <footer> 
       <%= image_tag "dev-quiz-logo.png", class: "logofooter"%>
       <p><strong>Take the Quiz, Ace the Interview. Repeat.</strong><br>
       Dev Quiz is a web/mobile app designed for computer science majors and web developer bootcamp grads who are preparing for technical interviews. Created by New York Code &amp; Deisgn Academy Grads. Head to our <a href="">Dev Quiz Github</a> for all info.</p>
     </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
   </body>
 </html>

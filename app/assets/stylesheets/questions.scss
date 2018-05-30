@@ -6,17 +6,22 @@ body {
   height: 100%;
   width: 100%;
 }
+li {
+  list-style: none;
+}
+.clock {
+  float: right;
+}
 footer {
   background-color: #1231B0;
-  position: absolute;
-  bottom: 0;
   color: #f7a523;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   margin: 0px;
   padding: 40px;
   font-size: 1.5em;
   float: right;
-  margin: 0px;
+  margin-top: 100px;
+  margin-bottom: 0px;
   height: 250px;
 }
 .logofooter {
