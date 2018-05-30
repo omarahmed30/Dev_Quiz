@@ -2,7 +2,7 @@
 
 
 .hero{
-    background-image: url("/images/computer.jpg");
+  background-image: url("/images/computer.jpg");
   height: 80vh;
   background-size: cover;
   padding-top: 5vh;
@@ -10,5 +10,11 @@
 }
 
 body {
-  background-color: black;
+  
+  background-color: black !important;
+  background-image: url("/images/computer.jpg") !important;
+  height: 80vh;
+  background-size: cover;
+  padding-top: 5vh;
+  margin-top: 10vh;
 }
