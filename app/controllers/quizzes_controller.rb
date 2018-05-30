@@ -19,4 +19,9 @@ class QuizzesController < ApplicationController
 
     def destroy
     end
+
+
+    def validate
+        @v = params[:option1]
+    end
 end

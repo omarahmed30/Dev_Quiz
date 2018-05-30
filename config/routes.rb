@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/quizzes/validate', to: "quizzes#validate", as: "quizzes_validate"
+
   resources :profiles
   resources :questions
   resources :quizzes
