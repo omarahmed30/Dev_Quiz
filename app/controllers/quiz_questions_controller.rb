@@ -19,4 +19,5 @@ class QuizQuestionsController < ApplicationController
 
     def destroy
     end
+
 end

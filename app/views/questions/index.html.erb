@@ -72,29 +72,29 @@
       <% end %>
         
       
-      <form>
+      <form name="validate" action="/quizzes/validate/" method="get">
         <ul>
           <li>  
             <label class="radio-inline">
-              <input type="radio" name="optradio"> Yes
+              <input type="radio" name="option1"> Yes
             </label>
           </li>
           <li>
             <label class="radio-inline">
-              <input type="radio" name="optradio"> No
+              <input type="radio" name="option2"> No
             </label>
           </li>
           <li>
             <label class="radio-inline">
-              <input type="radio" name="optradio"> Under Some Circumstances
+              <input type="radio" name="option3"> Under Some Circumstances
             </label>
           </li>
           <li>
             <label class="radio-inline">
-              <input type="radio" name="optradio"> Only if it is html5
+              <input type="radio" name="option4"> Only if it is html5
             </label>
           </li>
-            <button onClick="myTimer = setInterval(myCounter, 1000)"><%= link_to "Submit", questions_path(@question) %></button>
+            <button onClick="myTimer = setInterval(myCounter, 1000)"><%= link_to "Submit", quizzes_validate_path %></button>
         </ul>
       </form>
     </div>
