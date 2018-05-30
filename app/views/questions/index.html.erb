@@ -59,12 +59,18 @@
 
     
     <div class="container">
-      <h2>1) Can a single text link point to two different web pages?
+      
+      
       <% @questions.each do |question|%>
-      <%= "subject: #{question.subject}" %>
-      <%= "Question 1: #{question.difficulty}" %>
+      <h1><%= "subject: #{question.subject}" %> </h1>
+      <%= "Question #{question.id}: " %>
+      <h2> <%= question.description %></h2>
+      <h4> <%= question.option_1 %></h4>
+      <h4> <%= question.option_2 %></h4>
+      <h4> <%= question.option_3 %></h4>
+      <h4> <%= question.option_4 %></h4>
       <% end %>
-        </h2>
+        
       
       <form>
         <ul>

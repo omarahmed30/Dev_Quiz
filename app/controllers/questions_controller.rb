@@ -3,7 +3,7 @@ class QuestionsController < ApplicationController
 			@questions = Question.all
     end
 
-		def show
+	def show
 			@questions = Question.all
 			redirect_to root
     end
