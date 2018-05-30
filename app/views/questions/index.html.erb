@@ -90,16 +90,6 @@
 
     </div>
 
-    <div class="clock"><button onClick="myTimer = setInterval(myCounter, 1000)">Start counter!</button>
-    <p id="demo">Click on the button above and I will count forever.</p>
-    <button onClick="clearInterval(myTimer)">Stop counter!</button>
-    <script>
-    var c = 0;
-    function myCounter() {
-        document.getElementById("demo").innerHTML = ++c;
-    }
-    </script>
-    </div>  
 
     <footer> 
       <%= image_tag "dev-quiz-logo.png", class: "logofooter"%>
