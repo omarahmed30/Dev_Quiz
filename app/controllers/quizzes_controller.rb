@@ -22,6 +22,6 @@ class QuizzesController < ApplicationController
 
 
     def validate
-        @v = params[:option1]
+        @v = params[:option]
     end
 end
