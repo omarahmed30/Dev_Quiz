@@ -36,7 +36,7 @@ class QuizzesController < ApplicationController
         @v = params[:option]
     end
 
-    
+
     def html 
 
     end
@@ -53,6 +53,10 @@ class QuizzesController < ApplicationController
 
 
     def javascript
+
+    end
+
+    def cards 
 
     end
 
