@@ -1,4 +1,15 @@
 class QuizzesController < ApplicationController
+  
+  
+  def validate
+    
+    @v = params[:option]
+
+
+
+   end
+
+
     def index
     end
 
@@ -24,4 +35,25 @@ class QuizzesController < ApplicationController
     def validate
         @v = params[:option]
     end
+
+    
+    def html 
+
+    end
+
+
+    def css 
+
+    end
+
+
+    def ruby
+
+    end
+
+
+    def javascript
+
+    end
+
 end

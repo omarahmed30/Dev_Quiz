@@ -83,14 +83,18 @@
               <input type="radio" name="option" value= "<%= question.option_4 %>" > <%= question.option_4 %>
             </label>
           </li>
-            <button onClick="myTimer = setInterval(myCounter, 1000)"><%= link_to "Submit", quizzes_validate_path %></button>
+         
+            <button >
+             something random
+           </button>
+            
         </ul>
       </form>
       <% end %>
 
     </div>
 
-    <div class="clock"><button onClick="myTimer = setInterval(myCounter, 1000)">Start counter!</button>
+    <%# <div class="clock"><button onClick="myTimer = setInterval(myCounter, 1000)">Start counter!</button>
     <p id="demo">Click on the button above and I will count forever.</p>
     <button onClick="clearInterval(myTimer)">Stop counter!</button>
     <script>
@@ -99,7 +103,7 @@
         document.getElementById("demo").innerHTML = ++c;
     }
     </script>
-    </div>  
+    </div>   %>
 
     <footer> 
       <%= image_tag "dev-quiz-logo.png", class: "logofooter"%>
