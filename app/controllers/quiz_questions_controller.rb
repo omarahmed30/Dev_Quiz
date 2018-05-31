@@ -23,8 +23,7 @@ class QuizQuestionsController < ApplicationController
     def destroy
     end
 
-    def
-			validate
+    def validate
 			@questions = Question.all 
 			
 			@questions.each do |q|
