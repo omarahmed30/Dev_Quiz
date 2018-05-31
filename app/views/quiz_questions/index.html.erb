@@ -16,7 +16,7 @@
 
 <section class="questionslideshow"> 
   <% @questions.each do |question|%>
-      <form name="validate" action="/quizzes/validate/" method="get" class="mainquestion">
+      <form name="validate" action="/quiz_questions" method="get" class="mainquestion">
       <h2> <%= question.description %></h2>
       <script>
         let slideIndex = 0;
@@ -61,5 +61,8 @@
         </ul>
       </form>
       <% end %>
+
+
+      <%= @v %>
 
 </section>
