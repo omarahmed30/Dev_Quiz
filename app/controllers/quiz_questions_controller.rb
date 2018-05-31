@@ -1,8 +1,11 @@
 class QuizQuestionsController < ApplicationController
-    def index
+		def index
+			@questions = Question.all
+			
     end
 
-    def show
+		def show
+			@questions = Question.all			
     end
 
     def new
@@ -20,4 +23,16 @@ class QuizQuestionsController < ApplicationController
     def destroy
     end
 
+    def
+			validate
+			@questions = Question.all 
+			
+			@questions.each do |q|
+				if q.answer == params[:option]
+					@v = params[:option]
+				else
+					@v = "Sorry, that's incorrect. Guess again!"
+				end
+			end
+    end
 end

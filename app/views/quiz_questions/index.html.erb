@@ -1,4 +1,4 @@
-<h1>This is the QuizQuestions Index</h1>
+<h1>Quiz Questions JavaScript</h1>
 
 <% if signed_in? %>
   Signed in as: <%= current_user.email %>
@@ -12,3 +12,57 @@
     <div class="flash <%= key %>"><%= value %></div>
   <% end %>
 </div>
+
+
+<section class="questionslideshow"> 
+  <% @questions.each do |question|%>
+      <form name="validate" action="/quiz_questions" method="get" class="mainquestion">
+      <h2> <%= question.description %></h2>
+      <script>
+        let slideIndex = 0;
+
+        function carousel() {
+
+          let x = document.getElementsByClassName("mainquestion");
+
+          for (let i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > x.length) {
+            slideIndex = 1
+          }
+          x[slideIndex-1].style.display = "block";
+        }
+        carousel();
+      </script>
+        <ul>
+          <li>  
+            <label class="radio-inline">
+              <input type="radio" name="option" value= "<%= question.option_1 %>" >  <%= question.option_1 %>
+            </label>
+          </li>
+          <li>
+            <label class="radio-inline">
+              <input type="radio" name="option" value= "<%= question.option_2 %>" > <%= question.option_2 %>
+            </label>
+          </li>
+          <li>
+            <label class="radio-inline">
+              <input type="radio" name="option" value= "<%= question.option_3 %>"> <%= question.option_3 %>
+            </label>
+          </li>
+          <li>
+            <label class="radio-inline">
+              <input type="radio" name="option" value= "<%= question.option_4 %>" > <%= question.option_4 %>
+            </label>
+          </li>
+            <button onclick="carousel();"> Submit </button>
+        </ul>
+      </form>
+      <% end %>
+
+
+      <%= @v %>
+
+</section>
