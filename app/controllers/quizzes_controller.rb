@@ -22,13 +22,14 @@ class QuizzesController < ApplicationController
 
 
     def validate
-        @questions = Question.all 
-        
-        @questions.each do |q|
-           if q.answer == params[:option]
-            @v = params[:option]
-           end
+        @answer = Question.find(params[:question]).answer
+        if @answer == params[:option]
+            @v = params[:option] + " is Correct"
+        else
+            @v = params[:option] + " is incorrect"
         end
+
+
 
         
     end
