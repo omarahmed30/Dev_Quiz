@@ -1,11 +1,14 @@
 class QuizQuestionsController < ApplicationController
 		def index
 			@questions = Question.all
-			
+			@question = Question.find_by(params[:id])
+			if @question.answer == params[:option]
+					@v = params[:option]
+			end
     end
 
 		def show
-			@questions = Question.all			
+			@questions = Question.all	
     end
 
     def new
