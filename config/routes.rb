@@ -22,4 +22,6 @@ Rails.application.routes.draw do
 
   root 'splash_page#splash_page'
 
+  resources :questions
+
 end
