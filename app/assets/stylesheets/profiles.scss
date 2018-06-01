@@ -2,8 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-  background: linear-gradient(rgb(27, 29, 156), 
-      rgba(0, 0, 0, 0.356)), url(codes-coding-computer-247791.jpg);
   height: 100%;
   width: 100%;
 }
@@ -28,7 +26,7 @@ body {
 .nav-link {
   color: white;
 }
-.active {
+.nav-link:hover {
   background-color: #f7a523 !important;
 }
 main {
@@ -37,6 +35,7 @@ main {
   min-height: 600px;
   align-self: center;
   padding: 20px;
+  margin-top: 20px;
 }
 .profileimg {
   width: 70%;

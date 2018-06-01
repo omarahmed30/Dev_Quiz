@@ -1,107 +1,36 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Dev Quiz</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <% stylesheet_link_tag 'profiles', media: 'all' %>
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-      crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-      crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=BenchNine:300|Exo:900|Marvel|Open+Sans+Condensed:300|Passion+One|Six+Caps|Teko:700|Text+Me+One|Yanone+Kaffeesatz:300"
-      rel="stylesheet">
 
-  </head>
-  <body>
-    <nav>
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-          <%= image_tag "dev-quiz-logo.png",  class: "logo" %>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">DEV QUIZ</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Active</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-      </ul>
-    </nav>
-
-    <% if signed_in? %>
-      Signed in as: <%= current_user.email %>
-      <%= button_to 'Sign out', sign_out_path, method: :delete %>
-    <% else %>
-      <%= link_to 'Sign in', sign_in_path %>
-    <% end %>
-
-    <div id="flash">
-      <% flash.each do |key, value| %>
-        <div class="flash <%= key %>"><%= value %></div>
-      <% end %>
+<main class="container">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <%= image_tag "3448054386_5b5bdf1675_o.jpg", class: "img-thumbnail rounded float-left profileimg", alt: "Responsive image"%>
+      </div>
+      <div class="col userinfo">
+        <p>USER INFO</p>
+        <p>Email Address: <%=  @user.email %></p>
+        <p>First Name: <%=  @profile.first_name %></p>
+        <p>Last Name: <%=  @profile.last_name %></p>
+      </div>
     </div>
-    <%= puts "whattup"%>
-
-    <main class="container">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <%= image_tag "3448054386_5b5bdf1675_o.jpg", class: "img-thumbnail rounded float-left profileimg", alt: "Responsive image"%>
-          </div>
-          <div class="col userinfo">
-            <p>USER INFO</p>
-            <p>Email Address: <%=  @user.email %></p>
-            <p>First Name: <%=  @profile.first_name %></p>
-            <p>Last Name: <%=  @profile.last_name %></p>
-          </div>
-        </div>
+  </div>
+  <div class="container lg">
+    <div class="row">
+      <div class="col quizofday col-lg-auto col-md-auto">
+        Dev Quiz of the Day
       </div>
-      <div class="container lg">
-        <div class="row">
-          <div class="col quizofday col-lg-auto col-md-auto">
-            Dev Quiz of the Day
-          </div>
-        </div>
+    </div>
+  </div>
+  <div class="container completequizzes">
+    <div class="row">
+      <div class="col completedquiztxt">
+        <h1>Completed Quizzes</h1>
       </div>
-      <div class="container completequizzes">
-        <div class="row">
-          <div class="col completedquiztxt">
-            <h1>Completed Quizzes</h1>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm">Badge<br><%= image_tag "3448054386_5b5bdf1675_o.jpg", class: "img-thumbnail rounded badgesimg", alt: "Responsive image"%></div>
-          <div class="col-sm">Badge<br><%= image_tag "3448054386_5b5bdf1675_o.jpg", class: "img-thumbnail rounded badgesimg", alt: "Responsive image"%></div>
-          <div class="col-sm">Badge<br><%= image_tag "3448054386_5b5bdf1675_o.jpg", class: "img-thumbnail rounded badgesimg", alt: "Responsive image"%></div>
-        </div>
-      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">Badge<br><%= image_tag "3448054386_5b5bdf1675_o.jpg", class: "img-thumbnail rounded badgesimg", alt: "Responsive image"%></div>
+      <div class="col-sm">Badge<br><%= image_tag "3448054386_5b5bdf1675_o.jpg", class: "img-thumbnail rounded badgesimg", alt: "Responsive image"%></div>
+      <div class="col-sm">Badge<br><%= image_tag "3448054386_5b5bdf1675_o.jpg", class: "img-thumbnail rounded badgesimg", alt: "Responsive image"%></div>
+    </div>
+  </div>
 
-    </main>
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"></script>
-    <footer> 
-      <%= image_tag "dev-quiz-logo.png", class: "logofooter"%>
-      <p><strong>Take the Quiz, Ace the Interview. Repeat.</strong><br>
-      Dev Quiz is a web/mobile app designed for computer science majors and web developer bootcamp grads who are preparing for technical interviews. Created by New York Code &amp; Deisgn Academy Grads. Head to our <a href="">Dev Quiz Github</a> for all info.</p>
-    </footer>
-  </body>
-</html>
+</main>
