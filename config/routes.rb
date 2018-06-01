@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   resources :user_questions
 
   root 'splash_page#splash_page'
-
+# 
 end
