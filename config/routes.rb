@@ -24,5 +24,13 @@ Rails.application.routes.draw do
   root 'splash_page#splash_page'
   
   resources :questions
+  resources :profiles
+  resources :quizzes
+  resources :quiz_questions
+  resources :user_questions
+
+  post '/quiz_questions/validate', to: 'quiz_questions#validate', as: 'quiz_validate'
+
+  root 'splash_page#splash_page'
 
 end

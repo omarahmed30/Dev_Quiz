@@ -1,4 +1,4 @@
-<h1>Quiz Questions JavaScript</h1>
+<h1>Quiz Questions FIZAL</h1>
 
 <% if signed_in? %>
   Signed in as: <%= current_user.email %>
@@ -14,54 +14,42 @@
 </div>
 
 
+
 <section class="questionslideshow"> 
+  <form action="/quiz_questions/validate" method="post" >
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   <% @questions.each do |question|%>
-      <form name="validate" action="/quiz_questions" method="get" class="mainquestion">
+    <div class="mainquestion">
       <h2> <%= question.description %></h2>
-      <script>
-        let slideIndex = 0;
-
-        function carousel() {
-
-          let x = document.getElementsByClassName("mainquestion");
-          for (let i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-          }
-          slideIndex++;
-          if (slideIndex > x.length) {
-            slideIndex = 1
-
-          }
-          x[slideIndex-1].style.display = "block";
-        }
-        carousel();
-      </script>
         <ul>
           <li>  
             <label class="radio-inline">
-              <input type="radio" name="option" value= "<%= question.option_1 %>" >  <%= question.option_1 %>
+              <input type="radio" name="<%='q'+question.id.to_s%>" value= "<%= question.option_1 %>" >  <%= question.option_1 %>
             </label>
           </li>
           <li>
             <label class="radio-inline">
-              <input type="radio" name="option" value= "<%= question.option_2 %>" > <%= question.option_2 %>
+              <input type="radio" name="<%='q'+question.id.to_s%>" value= "<%= question.option_2 %>" > <%= question.option_2 %>
             </label>
           </li>
           <li>
             <label class="radio-inline">
-              <input type="radio" name="option" value= "<%= question.option_3 %>"> <%= question.option_3 %>
+              <input type="radio" name="<%='q'+question.id.to_s%>" value= "<%= question.option_3 %>"> <%= question.option_3 %>
             </label>
           </li>
           <li>
             <label class="radio-inline">
-              <input type="radio" name="option" value= "<%= question.option_4 %>" > <%= question.option_4 %>
+              <input type="radio" name="<%='q'+question.id.to_s%>" value= "<%= question.option_4 %>" > <%= question.option_4 %>
             </label>
           </li>
-            <button>Submit </button>
+        <% if @questions.last.id == question.id %>
+          <button>Submit </button> 
+          <% end %>
             
         </ul>
-      </form>
+      </div>
       <% end %>
+      </form>
       <button onclick="carousel(); return false;"> Next </button>
       <%# return false below keeps the page from being reloaded. but I'm not sure. it's exactly what we need, since with it, the page advances BUT the answer from the first question also stays put even after clicking next.  
       
@@ -74,6 +62,24 @@
       
       <h3><%= @v %><h3>
 
+  <script>
+    let slideIndex = 0;
+
+    function carousel() {
+
+      let x = document.getElementsByClassName("mainquestion");
+      for (let i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > x.length) {
+        slideIndex = 1
+
+      }
+      x[slideIndex-1].style.display = "block";
+    }
+    carousel();
+  </script>
       
 
 </section>
