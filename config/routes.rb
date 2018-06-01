@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get 'quizzes/html', to: "quizzes#html", as: "quizzes_html"
   get 'quizzes/css', to: "quizzes#css", as: "quizzes_css"
   get 'quizzes/ruby', to: "quizzes#ruby", as: "quizzes_ruby"
-  get 'quizzes/javascript', to: "quizzes#javascript", as: "quzzes_javascript"
+  get 'quizzes/javascript', to: "quizzes#javascript", as: "quizzes_javascript"
  
   get'quizzes/cards', to: "quizzes#cards", as: "cards"
 
