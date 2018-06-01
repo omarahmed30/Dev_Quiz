@@ -139,4 +139,24 @@ Question.create(description:"(function() {
 
  Question.create(description:"a sorting method that goest through, finds the smallest number and places it first", option_1:"binary sort", option_2:"selection sort", option_3:"insertion sort", option_4:"bubble sort", answer:2, subject:"javascript", difficulty:2)
 
- 
+
+# html easy
+Question.create(description:"How do you create links to sections within the same page?", option_1:"<a href=”#topmost”>BACK TO TOP</a> then create a separate tag <a name=”topmost”> somewhere on the top", option_2:"<a href=”.topmost”>BACK TO TOP</a> then create a separate tag <a name=”topmost”> somewhere on the top", option_3:"<a href=”back-to-top”> Back To Top</a>", option_4:"A and B both", answer:1, subject:"html", difficulty:1)
+
+Question.create(description:"Can a single text link point to two different web pages?", option_1:"Yes", option_2:"No", option_3:"Under Some Circumstances", option_4:"Only if it is html5", answer:"No", subject:"html", difficulty:1)
+
+Question.create(description:"How do you create text on a webpage that will allow you to send an email when clicked?", option_1:"<a HREF=”mailto:youremailaddress”>text to be clicked</a>", option_2:"You can not do this with simple html", option_3:"<mail href=”mailto:youremailaddress.com”> Send Email </mail>", option_4:"A and C both", answer:1, subject:"html", difficulty:1)
+
+
+# html hard
+Question.create(description:"can you change only bullet point colors?", option_1:"yes", option_2:"no", option_3:"only on mobile devices", option_4:"not really", answer:1 , subject:"html", difficulty:2)
+
+Question.create(description:"what is a marquee", option_1:"a platform device for text", option_2:"a way to apply scrolling text", option_3:"a color system", option_4:"4d dropdowns", answer:2 , subject:"html", difficulty:2)
+
+Question.create(description:"what tag is new to html5", option_1:"<p>", option_2:"<audio>", option_3:"<file>", option_4:"<section>", answer:2 ,subject:"html", difficulty:1)
+
+# Question.create(description:"what is html5 session storage", option_1:"stores data of current session and then deleted", option_2:" ", option_3:" ", option_4:" ", answer: , subject:"html", difficulty:1)
+
+# Question.create(description:" ", option_1:" ", option_2:" ", option_3:" ", option_4:" ", answer: , subject:"html", difficulty:1)
+
+# Question.create(description:" ", option_1:" ", option_2:" ", option_3:" ", option_4:" ", answer: , subject:"html", difficulty:1)
