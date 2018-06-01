@@ -1,4 +1,15 @@
 class QuizzesController < ApplicationController
+  
+  
+  def validate
+    
+    @v = params[:option]
+
+
+
+   end
+
+
     def index
     end
 
@@ -68,4 +79,29 @@ class QuizzesController < ApplicationController
     #         @v.push(Question.find(params[:question4])["option_#{params[:option4]}"] + " is incorrect")
     #     end
     end
+
+
+    def html 
+
+    end
+
+
+    def css 
+
+    end
+
+
+    def ruby
+
+    end
+
+
+    def javascript
+
+    end
+
+    def cards 
+
+    end
+
 end

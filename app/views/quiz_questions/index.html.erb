@@ -1,4 +1,4 @@
-<h1>This is the QuizQuestions Index</h1>
+<h1>Quiz Questions JavaScript</h1>
 
 <% if signed_in? %>
   Signed in as: <%= current_user.email %>
@@ -12,3 +12,68 @@
     <div class="flash <%= key %>"><%= value %></div>
   <% end %>
 </div>
+
+
+<section class="questionslideshow"> 
+  <% @questions.each do |question|%>
+      <form name="validate" action="/quiz_questions" method="get" class="mainquestion">
+      <h2> <%= question.description %></h2>
+      <script>
+        let slideIndex = 0;
+
+        function carousel() {
+
+          let x = document.getElementsByClassName("mainquestion");
+          for (let i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > x.length) {
+            slideIndex = 1
+
+          }
+          x[slideIndex-1].style.display = "block";
+        }
+        carousel();
+      </script>
+        <ul>
+          <li>  
+            <label class="radio-inline">
+              <input type="radio" name="option" value= "<%= question.option_1 %>" >  <%= question.option_1 %>
+            </label>
+          </li>
+          <li>
+            <label class="radio-inline">
+              <input type="radio" name="option" value= "<%= question.option_2 %>" > <%= question.option_2 %>
+            </label>
+          </li>
+          <li>
+            <label class="radio-inline">
+              <input type="radio" name="option" value= "<%= question.option_3 %>"> <%= question.option_3 %>
+            </label>
+          </li>
+          <li>
+            <label class="radio-inline">
+              <input type="radio" name="option" value= "<%= question.option_4 %>" > <%= question.option_4 %>
+            </label>
+          </li>
+            <button>Submit </button>
+            
+        </ul>
+      </form>
+      <% end %>
+      <button onclick="carousel(); return false;"> Next </button>
+      <%# return false below keeps the page from being reloaded. but I'm not sure. it's exactly what we need, since with it, the page advances BUT the answer from the first question also stays put even after clicking next.  
+      
+      ALSO right now, clicking the SUBMIT button on second slide takes you BACK TO quiz_questions index page. Not sure why. Next button works though. 
+      
+      next steps: 
+      1 stop the bugs. 
+      2 Be sure we're capturing input and relaying right/wrong answer correctly on the page. 
+      3 Give a badge when quiz is complete(so be able to KEEP COUNT somewhere then display that).Then maybe redirect to quiz cards page. %>
+      
+      <h3><%= @v %><h3>
+
+      
+
+</section>
