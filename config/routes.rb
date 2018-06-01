@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get'quizzes/cards', to: "quizzes#cards", as: "cards"
 
   root 'splash_page#splash_page'
-
+  
   resources :questions
 
 end
