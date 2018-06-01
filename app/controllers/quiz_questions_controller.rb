@@ -1,10 +1,10 @@
 class QuizQuestionsController < ApplicationController
 		def index
 			@questions = Question.all
-			@question = Question.find_by(params[:id])
-			if @question.answer == params[:option]
-					@v = params[:option]
-			end
+			# @question = Question.find_by(params[:id])
+			# if @question.answer == params[:option]
+			# 		@v = params[:option]
+			# end
     end
 
 		def show
@@ -26,15 +26,17 @@ class QuizQuestionsController < ApplicationController
     def destroy
     end
 
-    def validate
-			@questions = Question.all 
+		def validate
+			puts params
+			# @questions = Question.all 
 			
-			@questions.each do |q|
-				if q.answer == params[:option]
-					@v = params[:option]
-				else
-					@v = "Sorry, that's incorrect. Guess again!"
-				end
-			end
+			# @questions.each do |q|
+			# 	if q.answer == params[:option]
+			# 		@v = params[:option]
+			# 	else
+			# 		@v = "Sorry, that's incorrect. Guess again!"
+			# 	end
+			# end
+			redirect_to '/quiz_questions'
     end
 end
