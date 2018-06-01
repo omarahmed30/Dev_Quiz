@@ -1,6 +1,16 @@
 class QuizQuestionsController < ApplicationController
 		def index
-			@questions = Question.all
+      @questions = Question.all
+			
+			@questions.each do |q|
+        if 
+          q.answer == params[:option]
+					@v = "thats correct!"
+				else
+					@v = "Sorry, that's incorrect. Guess again!"
+        end
+        
+			end
 			
     end
 
@@ -24,14 +34,14 @@ class QuizQuestionsController < ApplicationController
     end
 
     def validate
-			@questions = Question.all 
+			# @questions = Question.all 
 			
-			@questions.each do |q|
-				if q.answer == params[:option]
-					@v = params[:option]
-				else
-					@v = "Sorry, that's incorrect. Guess again!"
-				end
-			end
+			# @questions.each do |q|
+			# 	if q.answer == params[:option]
+			# 		@v = params[:option]
+			# 	else
+			# 		@v = "Sorry, that's incorrect. Guess again!"
+			# 	end
+			# end
     end
 end
