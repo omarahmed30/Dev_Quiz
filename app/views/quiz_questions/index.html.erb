@@ -24,24 +24,29 @@
         <ul>
           <li>  
             <label class="radio-inline">
-              <input type="radio" name="<%='q'+question.id.to_s%>" value= "<%= question.option_1 %>" >  <%= question.option_1 %>
+              <input type="radio" name=<%="q#{question.id}"%> value=1 >  <%= question.option_1 %>
             </label>
           </li>
           <li>
             <label class="radio-inline">
-              <input type="radio" name="<%='q'+question.id.to_s%>" value= "<%= question.option_2 %>" > <%= question.option_2 %>
+              <input type="radio" name=<%="q#{question.id}"%> value=2 > <%= question.option_2 %>
             </label>
           </li>
           <li>
             <label class="radio-inline">
-              <input type="radio" name="<%='q'+question.id.to_s%>" value= "<%= question.option_3 %>"> <%= question.option_3 %>
+              <input type="radio" name=<%="q#{question.id}"%> value=3> <%= question.option_3 %>
             </label>
           </li>
           <li>
             <label class="radio-inline">
-              <input type="radio" name="<%='q'+question.id.to_s%>" value= "<%= question.option_4 %>" > <%= question.option_4 %>
+              <input type="radio" name=<%="q#{question.id}"%> value=4 > <%= question.option_4 %>
             </label>
           </li>
+          <li>
+              <input name=<%="question#{question.id}"%> type="hidden" value=<%=question.id%>
+          </li>
+
+          
         <% if @questions.last.id == question.id %>
           <button>Submit </button> 
           <% end %>
