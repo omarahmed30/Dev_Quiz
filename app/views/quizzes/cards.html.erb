@@ -1,29 +1,36 @@
-<div class="container">
-        
-            <p> Select a quiz to get started:</p>
+ <%= stylesheet_link_tag "splash_page" %>
+	<div class="container">				
+			<h2> Select a language and difficulty:</h2>
 
-    <div class = "row">
+			<div class="row">
+				<div class="col">
+						<%=link_to quizzes_html_path do %>
+							<%= image_tag("html.png", class: "img-thumbnail") %>
+						<% end %>
+						<br> 
+						<h4>HTML</h4>
+				</div>
+				<div class="col">
+					<%=link_to quizzes_javascript_path do %>
+							<%= image_tag("javascript_logo.png", class: "img-thumbnail") %>
+					<% end %>
+					<br> <h4>JavaScript</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+						<%=link_to quizzes_css_path do %>
+								<%= image_tag("css.svg", class: "img-thumbnail") %>
+						<% end %>
+						<br> <h4>CSS</h4>
 
-        <div class = "col">
-            <%=link_to quizzes_html_path do %>
-            	<%= image_tag("html.png", class: "img-thumbnail float-right") %>
-            <% end %>
-            <%=link_to quizzes_javascript_path do %>
-                <%= image_tag("javascript_logo.png", class: "img-thumbnail float-right") %>
-            <% end %>
-        </div>
-
-        <div class = "col">
-            <%=link_to quizzes_css_path do %>
-                <%= image_tag("css.png", class: "img-thumbnail float-left") %>
-            <% end %>
-            <%=link_to quizzes_ruby_path do %>
-                <%= image_tag("ruby.png", class: "img-thumbnail float-left") %>
-            <% end %>
-        </div>
-
-    </div>
-
-
-
-    </div>
+				</div>
+				<div class="col">
+						<%=link_to quizzes_ruby_path do %>
+								<%= image_tag("ruby.png", class: "img-thumbnail") %>
+						<% end %>
+						<br> <h4>Ruby</h4>
+				</div>
+			</div>
+	
+	</div>
