@@ -88,7 +88,7 @@ h4 {
   animation: fadeIn 2s ease-in;
   text-shadow: black 3px 3px 3px;
 }
-li {
+.begadv {
   list-style-type: none;
   display: inline-block;
   padding: 15px;
@@ -156,7 +156,7 @@ nav {
   line-height: 0.8em;
 }
 .nav-link:hover {
-  color: #4FBFED !important;
+  color: white !important;
   text-shadow: black 1px 1px 1px;
 }
 // nav bar animations from bootstrap
