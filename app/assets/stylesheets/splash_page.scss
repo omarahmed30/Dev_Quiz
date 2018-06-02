@@ -43,6 +43,17 @@ h2 {
     width: 100%;
   }
 }
+.h2sansanimation {
+  color: white;
+  font-family: 'Iceland', cursive;
+  font-size: 2.5em;
+  margin-top: 0px;
+  margin-left: 15px;
+  margin-bottom: 0px;
+  padding: 0px;
+  padding-left: 10px;
+  text-shadow: black 3px 3px 3px;
+}
 h3 {
   color: white;
   font-family: 'Iceland', cursive;
@@ -77,23 +88,29 @@ h4 {
   animation: fadeIn 2s ease-in;
   text-shadow: black 3px 3px 3px;
 }
+li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 15px;
+}
 .btn, .btn-primary {
   background-color: rgb(27, 31, 92);
 } 
 footer {
   color: #2993bd;
-  text-shadow:  rgb(27, 31, 92) 1px 1px 1px;
+  // text-shadow: black 1px 1px 1px;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   background-color: none;
   padding: 20px;
-  font-size: 1.5em;
+  font-size: 1.8em;
   float: right;
   margin-top: 50px;
   margin-bottom: 0px;
-  height: 80px;
+  width: 100%;
+  line-height: 25px;
 }
 .logofooter {
-  width: 200px;
+  width: 300px;
   float: left;
 }
 .img-thumbnail {
