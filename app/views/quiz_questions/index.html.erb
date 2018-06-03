@@ -1,4 +1,4 @@
-<h1>Quiz Questions FIZAL</h1>
+<h1>Quiz Questions</h1>
 
 <% if signed_in? %>
   Signed in as: <%= current_user.email %>
@@ -56,6 +56,7 @@
       <% end %>
       </form>
       <button onclick="carousel(); return false;"> Next </button>
+      
       <%# return false below keeps the page from being reloaded. but I'm not sure. it's exactly what we need, since with it, the page advances BUT the answer from the first question also stays put even after clicking next.  
       
       ALSO right now, clicking the SUBMIT button on second slide takes you BACK TO quiz_questions index page. Not sure why. Next button works though. 
