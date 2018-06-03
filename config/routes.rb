@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
   resource :session, controller: "clearance/sessions", only: [:create]
+  resources :quiz_qestions
 
   resources :users, controller: "clearance/users", only: [:create] do
     resource :password,
@@ -19,10 +20,20 @@ Rails.application.routes.draw do
   get 'quizzes/javascript', to: "quizzes#javascript", as: "quizzes_javascript"
  
   get'quizzes/cards', to: "quizzes#cards", as: "cards"
+  get '/quiz_questions/:subject/:difficulty', to: 'quiz_questions#index', as: "quiz_settings"
+
+  root 'splash_page#splash_page'
+  
+  resources :questions
+  resources :profiles
+  resources :quizzes
+  resources :quiz_questions
+  resources :user_questions
+
+  post '/quiz_questions/validate', to: 'quiz_questions#validate', as: 'quiz_validate'
 
   root 'splash_page#splash_page'
 
-  resources :questions
-  resources :quiz_questions
+  get'/quiz_questions/html_easy', to: "quiz_questions#html_easy", as: "html_easy"
 
 end
