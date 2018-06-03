@@ -4,65 +4,69 @@
 
 			<div class="row">
 				<div class="col">
-						<%=link_to quizzes_html_path do %>
+	
 							<%= image_tag("html.png", class: "img-thumbnail") %>
-						<% end %>
+						
 						<p class="h2sansanimation">HTML
 							<ul>
+							<%=link_to quizzes_css_path do %>
 								<li class="begadv">
 									<h4>Beginner </h4>
 								</li>
 								<li class="begadv">
 									<h4>Advanced</h4>
 								</li>
+							<%end%>
 							</ul>
 						</p>
 				</div>
 				<div class="col">
-					<%=link_to quizzes_javascript_path do %>
 							<%= image_tag("javascript_logo.svg", class: "img-thumbnail") %>
-					<% end %>
 					<p class="h2sansanimation">JavaScript
 						<ul>
+						<%=link_to quizzes_css_path do %>
 							<li class="begadv">
 								<h4>Beginner </h4>
 							</li>
 							<li class="begadv">
 								<h4>Advanced</h4>
 							</li>
+						<%end%>
 						</ul>
 					</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col">
-						<%=link_to quizzes_css_path do %>
-								<%= image_tag("css.svg", class: "img-thumbnail") %>
-						<% end %>
+						
+						<%= image_tag("css.svg", class: "img-thumbnail") %>
 						<p class="h2sansanimation">CSS
 							<ul>
+							<%=link_to quizzes_css_path do %>
 								<li class="begadv">
 									<h4>Beginner </h4>
 								</li>
 								<li class="begadv">
 									<h4>Advanced</h4>
 								</li>
+								<%end%>
 							</ul>
 						</p>
 
 				</div>
 				<div class="col">
-						<%=link_to quizzes_ruby_path do %>
-								<%= image_tag("ruby.png", class: "img-thumbnail") %>
-						<% end %>
+						<%= image_tag("ruby.png", class: "img-thumbnail") %>
+						
 						<p class="h2sansanimation">Ruby
 							<ul>
+							<%=link_to quizzes_css_path do %>
 								<li class="begadv">
 									<h4>Beginner </h4>
 								</li>
 								<li class="begadv">
 									<h4>Advanced</h4>
 								</li>
+							<%end%>
 							</ul>
 						</p>
 				</div>

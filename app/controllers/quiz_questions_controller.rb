@@ -82,7 +82,9 @@ class QuizQuestionsController < ApplicationController
 		# puts params
 
 		@v = []
+
 		$questions.each do |question| 
+
 			id = question.id
 			@answer = Question.find(params["question#{id}".to_sym]).answer
 			if @answer == params["q#{id}".to_sym]
