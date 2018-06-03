@@ -1,26 +1,26 @@
-    <%= stylesheet_link_tag "splash_page" %>
+<%= stylesheet_link_tag "splash_page" %>
 
-			<div id="flash">
-			<% flash.each do |key, value| %>
-					<div class="flash <%= key %>"><%= value %></div>
-			<% end %>
-			</div>
-	
-			<section class="hero">
-					<div class="container">
-							<div class="devquizhed">
-								<h2>DEV QUIZ</h2>
-							<div class="row">
-								<div class="col-md-7 devquizhed" id="lightbluebackground">
-										<p>
-										Take the tests.<br>
-										Ace the interviews.<br>
-										<h4>Get the job.</h4>
-										</p>
-										<a href="quizzes/cards"><button type="button" class="btn btn-primary">Get Started</button></a>
-								</div>
-							</div>
-						</div>
+<div id="flash">
+<% flash.each do |key, value| %>
+		<div class="flash <%= key %>"><%= value %></div>
+<% end %>
+</div>
+
+<section class="hero">
+		<div class="container">
+				<div class="devquizhed">
+					<h2>DEV QUIZ</h2>
+				<div class="row">
+					<div class="col-md-7 devquizhed" id="lightbluebackground">
+							<p>
+							Take the tests.<br>
+							Ace the interviews.<br>
+							<h4>Get the job.</h4>
+							</p>
+							<a href="quizzes/cards"><button type="button" class="btn btn-primary">Get Started</button></a>
 					</div>
-			
-			</section>
+				</div>
+			</div>
+		</div>
+
+</section>
