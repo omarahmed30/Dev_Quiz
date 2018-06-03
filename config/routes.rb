@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get 'quizzes/javascript', to: "quizzes#javascript", as: "quzzes_javascript"
  
   get'quizzes/cards', to: "quizzes#cards", as: "cards"
+  get '/quiz_questions/:subject/:difficulty', to: 'quiz_questions#index', as: "quiz_settings"
 
   root 'splash_page#splash_page'
   
@@ -32,5 +33,10 @@ Rails.application.routes.draw do
   post '/quiz_questions/validate', to: 'quiz_questions#validate', as: 'quiz_validate'
 
   root 'splash_page#splash_page'
+
+
+
+  get'/quiz_questions/html_easy', to: "quiz_questions#html_easy", as: "html_easy"
+
 
 end
