@@ -1,67 +1,74 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tag %>
+  <head>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tag %>
 
-<%= stylesheet_link_tag "profiles" %>
-    <%# <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/profiles.scss" /> %>
-      <%# links for bootstrap below %>
+    <%= stylesheet_link_tag "profiles" %>
+      <%# <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/profiles.scss" /> %>
+        <%# links for bootstrap below %>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-      crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-      crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=BenchNine:300|Exo:900|Marvel|Open+Sans+Condensed:300|Passion+One|Six+Caps|Teko:700|Text+Me+One|Yanone+Kaffeesatz:300"
-      rel="stylesheet">
-
-</head>
-<body>
-  <div id="header">
-    
-  </div>
-
-  <%# nav bar %>
-  <nav>
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-          <%= image_tag "dev-quiz-logo.png",  class: "logo" %>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">DEV QUIZ</a>
-        </li>
+        crossorigin="anonymous">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+      <link href="https://fonts.googleapis.com/css?family=BenchNine:300|Exo:900|Marvel|Open+Sans+Condensed:300|Passion+One|Six+Caps|Teko:700|Text+Me+One|Yanone+Kaffeesatz:300"
+        rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Gruppo|Jura:300|Nothing+You+Could+Do|Orbitron|Rajdhani|Rationale|Sunflower:300" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Iceland" rel="stylesheet">
+  </head>
+  <body>
+    <div id="header">
       
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Quizzes</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="/html">HTML</a>
-            <a class="dropdown-item" href="/css">CSS</a>
-            <a class="dropdown-item" href="/javascript">JavaScript</a>
-            <a class="dropdown-item" href="/ruby">Ruby</a>
-            <div class="dropdown-divider"></div>
-          </div>
-        </li>
+    </div>
 
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Profile</a>
-        </li>
+    <%# nav bar %>
+    <script>$(document).ready(function(){
+          $('.animated-icon1,.animated-icon3,.animated-icon4').click(function(){
+              $(this).toggleClass('open');
+          });
+      });
+    </script>
 
-        <li class="nav-item">
+
+    <%# nav 11111 %>
+
+<nav class="navbar navfont navbar-light amber lighten-4">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand nav-link" href="/"><h4>dev quiz!</h4></a>
+  
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20" aria-controls="navbarSupportedContent20"
+        aria-expanded="false" aria-label="Toggle navigation"><div class="animated-icon1"><span></span><span></span><span></span></div></button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent20">  
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto"></ul>
+          <li class="nav-item">
+              <%=link_to cards_path, class: "nav-link active" do %>all quizzes<%end%>
+          </li>
+          <li class="nav-item">
           <% if signed_in? -%>
-           <%= link_to 'Sign Out', sign_out_path, method: :delete, class: "nav-link "%>
+            <%= link_to 'sign out', sign_out_path, method: :delete, class: "nav-link "%>
+          </li>
           <% else %>
-            <%= link_to 'Sign In', sign_in_path, class: "nav-link " %>
-            <li class="nav-item">
-              <%= link_to 'Sign Up', sign_up_path, class: "nav-link" %>
-            </li>
-          <% end -%>
+          <li class="nav-item">
+            <%= link_to 'sign in', sign_in_path, class: "nav-link " %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to 'sign up', sign_up_path, class: "nav-link" %>
+          </li>
+            <% end -%>
         </li>
-        
-      </ul>
-    </nav>
-    <%# end nav %>
+        </ul>
+        <!-- Links -->
 
+    </div>
+    <!-- Collapsible content -->
 
+  </nav>
+<!--/.Navbar-->
 
   <div id="flash">
     <% flash.each do |key, value| -%>
@@ -71,14 +78,28 @@
 <%= link_to "HTML EASY", quiz_settings_path(:subject => "html", :difficulty => 1) %>
 <%= link_to "RUBY HARD", quiz_settings_path(:subject => "ruby", :difficulty => 2) %>
 <%= link_to "HTML HARD", quiz_settings_path(:subject => "html", :difficulty => 2) %>
+      <%# end nav %>
 
-  <%= yield %>
+    <div id="bluebackground">
 
+      <div id="flash">
+        <% flash.each do |key, value| -%>
+          <div id="flash_<%= key %>"><%=h value %></div>
+        <% end %>
+      </div>
+
+      <%= yield %>
+    </div>
     <%# bootstrap links below %>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
       crossorigin="anonymous"></script>
     <%# end of bootstrap links %>
-</body>
+
+    <footer > 
+      <%= image_tag "dev-quiz-logo-blue.png", class: "logofooter"%>
+      <p>Dev Quiz is a web/mobile app designed for people preparing for technical coding interviews. Created by New York Code &amp; Deisgn Academy Grads. Head to our <a href="">Dev Quiz Github</a> now for all the info.</p>
+    </footer>
+  </body>
 </html>

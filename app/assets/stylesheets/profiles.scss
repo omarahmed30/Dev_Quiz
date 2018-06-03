@@ -2,34 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-  background: linear-gradient(rgb(27, 29, 156), 
-      rgba(0, 0, 0, 0.356)), url(codes-coding-computer-247791.jpg);
   height: 100%;
   width: 100%;
 }
-.logo {
-  width: 80px;
-  height: 80px;
-}
-.nav {
-  background-color: #F5FCFD;
-  color: #1231B0;
-  height: 50px;
-  box-shadow: black 5px 5px 5px;
-  font-family: 'Exo', sans-serif;
-  /* font-family: 'Passion One', cursive; */
-  font-family: 'Teko', sans-serif;
-  font-size: 1.3em;
-  font-kerning: auto;
-}
-.nav-pills {
-  background-color: #1231B0;
-}
-.nav-link {
-  color: white;
-}
-.active {
-  background-color: #f7a523 !important;
+div#bluebackground {
+  // background-image: url('dev-quiz-copy.png');
+  margin: 0;
+  padding: 30px;
 }
 main {
   background-color: #F5FCFD;
@@ -37,6 +16,7 @@ main {
   min-height: 600px;
   align-self: center;
   padding: 20px;
+  margin-top: 20px;
 }
 .profileimg {
   width: 70%;
@@ -81,9 +61,11 @@ main {
   font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 h1 {
-  font-variant-caps: all-small-caps; 
+  font-variant-caps: all-small-caps;
+  font-family: 'Yanone Kaffeesatz', sans-serif; 
   text-align: center;
   font-size: 5em;
+  color: white;
 }
 .badgesimg {
   width: 150px;
@@ -95,26 +77,11 @@ h1 {
   box-shadow: #f7a523 3px 3px 3px;
   transform: rotateZ(3deg);
 }
-footer {
-  background-color: #1231B0;
-  color: #f7a523;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  margin: 0px;
-  padding: 40px;
-  font-size: 1.5em;
-  float: right;
-  margin: 0px;
-  height: 250px;
-}
-.logofooter {
-  width: 200px;
-  float: left;
-}
 
 .hero{
-  background-image: url("computer.jpg");
-height: 80vh;
-background-size: cover;
-padding-top: 5vh;
-margin-top: 10vh;
+  // background-image: url("computer.jpg");
+  height: 80vh;
+  background-size: cover;
+  padding-top: 5vh;
+  margin-top: 10vh;
 }
