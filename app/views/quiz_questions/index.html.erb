@@ -1,20 +1,5 @@
 <h1>Quiz Questions</h1>
 
-<% if signed_in? %>
-  Signed in as: <%= current_user.email %>
-  <%= button_to 'Sign out', sign_out_path, method: :delete %>
-<% else %>
-  <%= link_to 'Sign in', sign_in_path %>
-<% end %>
-
-<div id="flash">
-  <% flash.each do |key, value| %>
-    <div class="flash <%= key %>"><%= value %></div>
-  <% end %>
-</div>
-
-
-
 <section class="questionslideshow"> 
   <form action="/quiz_questions/validate" method="post" >
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
@@ -45,18 +30,18 @@
           <li>
               <input name=<%="question#{question.id}"%> type="hidden" value=<%=question.id%>
           </li>
-
           
         <% if $questions.last.id == question.id %>
           <button>Submit </button> 
-          <% end %>
+        <%else%>
+          <button onclick="carousel(); return false;"> Next </button>
+        <% end %>
             
         </ul>
       </div>
       <% end %>
       </form>
-      <button onclick="carousel(); return false;"> Next </button>
-      
+
       <%# return false below keeps the page from being reloaded. but I'm not sure. it's exactly what we need, since with it, the page advances BUT the answer from the first question also stays put even after clicking next.  
       
       ALSO right now, clicking the SUBMIT button on second slide takes you BACK TO quiz_questions index page. Not sure why. Next button works though. 
