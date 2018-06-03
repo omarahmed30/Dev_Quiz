@@ -2,10 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .questionslideshow {
-  background-color: #569ACE;
+
 }
 .mainquestion {
   margin: 20px;
   padding: 20px;
   display: none;
+}
+
+
+
+.mainquestion{
+  list-style: none;
+
+
 }
