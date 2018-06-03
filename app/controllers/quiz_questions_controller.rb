@@ -31,7 +31,7 @@ class QuizQuestionsController < ApplicationController
 		# puts params
 
 		@v = []
-		if Question.all.each do |question| 
+		Question.all.each do |question| 
 			id = question.id
 			@answer = Question.find(params["question#{id}".to_sym]).answer
 			if @answer == params["q#{id}".to_sym]
