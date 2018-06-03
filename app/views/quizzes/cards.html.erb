@@ -9,14 +9,12 @@
 						
 						<p class="h2sansanimation">HTML
 							<ul>
-							<%=link_to quizzes_css_path do %>
-								<li class="begadv">
-									<h4>Beginner </h4>
-								</li>
-								<li class="begadv">
-									<h4>Advanced</h4>
-								</li>
-							<%end%>
+							<li class="begadv">
+								<%= link_to "Beginner", quiz_settings_path(:subject => "html", :difficulty => 1) %>
+							</li>
+							<li class="begadv">
+								<%= link_to "Advanced", quiz_settings_path(:subject => "html", :difficulty => 2) %>
+							</li>
 							</ul>
 						</p>
 				</div>
@@ -24,14 +22,12 @@
 							<%= image_tag("javascript_logo.svg", class: "img-thumbnail") %>
 					<p class="h2sansanimation">JavaScript
 						<ul>
-						<%=link_to quizzes_css_path do %>
 							<li class="begadv">
-								<h4>Beginner </h4>
+								<%= link_to "Beginner", quiz_settings_path(:subject => "javscript", :difficulty => 1) %>
 							</li>
 							<li class="begadv">
-								<h4>Advanced</h4>
+								<%= link_to "Advanced", quiz_settings_path(:subject => "javascript", :difficulty => 2) %>
 							</li>
-						<%end%>
 						</ul>
 					</p>
 				</div>
@@ -42,14 +38,12 @@
 						<%= image_tag("css.svg", class: "img-thumbnail") %>
 						<p class="h2sansanimation">CSS
 							<ul>
-							<%=link_to quizzes_css_path do %>
-								<li class="begadv">
-									<h4>Beginner </h4>
-								</li>
-								<li class="begadv">
-									<h4>Advanced</h4>
-								</li>
-								<%end%>
+							<li class="begadv">
+								<%= link_to "Beginner", quiz_settings_path(:subject => "css", :difficulty => 1) %>
+							</li>
+							<li class="begadv">
+								<%= link_to "Advanced", quiz_settings_path(:subject => "css", :difficulty => 2) %>
+							</li>
 							</ul>
 						</p>
 
@@ -59,14 +53,12 @@
 						
 						<p class="h2sansanimation">Ruby
 							<ul>
-							<%=link_to quizzes_css_path do %>
-								<li class="begadv">
-									<h4>Beginner </h4>
-								</li>
-								<li class="begadv">
-									<h4>Advanced</h4>
-								</li>
-							<%end%>
+							<li class="begadv">
+								<%= link_to "Beginner", quiz_settings_path(:subject => "ruby", :difficulty => 1) %>
+							</li>
+							<li class="begadv">
+								<%= link_to "Advanced", quiz_settings_path(:subject => "ruby", :difficulty => 2) %>
+							</li>
 							</ul>
 						</p>
 				</div>
