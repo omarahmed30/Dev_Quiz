@@ -3,13 +3,12 @@
   // background-image: url("computer.jpg");
   height: 80vh;
   background-size: cover;
-  padding-top: 5vh;
-  margin-top: 5vh;
-  margin-bottom: 20vh;
+  margin-top: 1vh;
+  margin-bottom: 10vh;
 }
 div#bluebackground {
   background-image: url('dev-quiz-copy.png');
-  margin: 0;
+  margin-bottom: 30px;
   padding: 30px;
   color: white;
 }
@@ -17,6 +16,26 @@ div#bluebackground {
 
   animation: fadeInBackground 2s forwards ease-in;
   padding: 20px;
+}
+.col-md-4 {
+  padding: 30px;
+}
+.arrow {
+  height: 90px;
+  animation: arrowGo 2s ease infinite;
+}
+@keyframes arrowGo {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  
+  50% {
+    transform: translate(25px, 0);
+  }
+  
+  100% {
+    transform: translate(-5px, 0);
+  }
 }
 .devquizhed {
   color: white;
@@ -100,17 +119,20 @@ footer {
   color: #2993bd;
   // text-shadow: black 1px 1px 1px;
   font-family: 'Yanone Kaffeesatz', sans-serif;
-  background-color: none;
+  background-color: white;
   padding: 20px;
   font-size: 1.8em;
   float: right;
-  margin-top: 50px;
+  margin-top: 0px;
   margin-bottom: 0px;
+  padding: 40px;
   width: 100%;
   line-height: 25px;
+  height: 30px;
 }
 .logofooter {
   width: 300px;
+  padding: 0px;
   float: left;
 }
 .img-thumbnail {
@@ -121,7 +143,16 @@ footer {
   padding: 20px;
   margin: 25px;
 }
-
+.cards-rows {
+  width: 100% !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+.col {
+  width: 100% !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
 //nav
 nav {
   background-color: transparentize(rgb(9, 8, 65), 0.0);
