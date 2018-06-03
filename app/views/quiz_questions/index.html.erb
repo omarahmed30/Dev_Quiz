@@ -18,7 +18,7 @@
 <section class="questionslideshow"> 
   <form action="/quiz_questions/validate" method="post" >
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-  <% @questions.each do |question|%>
+  <% $questions.each do |question|%>
     <div class="mainquestion">
       <h2> <%= question.description %></h2>
         <ul>
@@ -47,7 +47,7 @@
           </li>
 
           
-        <% if @questions.last.id == question.id %>
+        <% if $questions.last.id == question.id %>
           <button>Submit </button> 
           <% end %>
             
