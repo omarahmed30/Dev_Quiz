@@ -35,17 +35,20 @@ class QuizQuestionsController < ApplicationController
 	def validate
 		# puts params
 
-		@v = []
+		@result = []
+		@questions = []
 
 		$questions.each do |question| 
 
 			id = question.id
 			@answer = Question.find(params["question#{id}".to_sym]).answer
 			if @answer == params["q#{id}".to_sym]
-				@v.push(Question.find(params["question#{id}".to_sym])["option_#{params["q#{id}".to_sym]}"] + " is Correct")
+				@questions.push(Question.find(params["question#{id}".to_sym]).description)
+				@result.push(Question.find(params["question#{id}".to_sym])["option_#{params["q#{id}".to_sym]}"] + " is Correct")
 	
 			else
-				@v.push(Question.find(params["question#{id}".to_sym])["option_#{params["q#{id}".to_sym]}"] + " is incorrect")
+				@questions.push(Question.find(params["question#{id}".to_sym]).description)
+				@result.push(Question.find(params["question#{id}".to_sym])["option_#{params["q#{id}".to_sym]}"] + " is incorrect")
 			end
 		end
 	end
