@@ -70,8 +70,14 @@ h2 {
   margin-left: 15px;
   margin-bottom: 0px;
   padding: 0px;
-  padding-left: 10px;
+  padding-left: 133px;
   text-shadow: black 3px 3px 3px;
+}
+.begadv {
+  list-style-type: none;
+  display: inline-block;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 h3 {
   color: white;
@@ -107,11 +113,6 @@ h4 {
   animation: fadeIn 2s ease-in;
   text-shadow: black 3px 3px 3px;
 }
-.begadv {
-  list-style-type: none;
-  display: inline-block;
-  padding: 15px;
-}
 .btn, .btn-primary {
   background-color: rgb(27, 31, 92);
 } 
@@ -121,12 +122,12 @@ footer {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   background-color: white;
   padding: 20px;
-  font-size: 1.8em;
+  font-size: 1.6em;
   margin-top: 0px !important;
   margin-bottom: 0px !important;
-  padding: 30px;
+  padding: 10px;
   width: 100%;
-  line-height: 25px;
+  line-height: 20px;
   height: 30px !important;
 }
 .logofooter {
@@ -164,7 +165,6 @@ footer {
   color: #48eaff;
   font-size: 1.5em;
 }
-
 .gradestyle {
   color: white;
   font-family: 'Iceland', cursive;
@@ -172,15 +172,14 @@ footer {
   border-style:solid;
   border-color:white;
 }
-
 .incorrect{
   color:red;
 }
-
 .correct{
   color:lightgreen;
 }
-//nav
+//
+//EVERYTHING NAV below
 nav {
   background-color: #32A9B8;
   height: 70px;
