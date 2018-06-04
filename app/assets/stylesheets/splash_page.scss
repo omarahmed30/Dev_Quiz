@@ -164,6 +164,14 @@ footer {
   color: #48eaff;
   font-size: 1.5em;
 }
+
+.incorrect{
+  color:red;
+}
+
+.correct{
+  color:lightgreen;
+}
 //nav
 nav {
   background-color: transparentize(rgb(9, 8, 65), 0.0);

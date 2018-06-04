@@ -5,7 +5,11 @@
 <ul>
     
     <%@result.size.times do |index|%>
-        <li class="questionstyle"><strong><%="Question: #{@questions[index]}"%></strong>
-        <li class="answerstyle"><%=@result[index]%></li> <br><br>
+        <li class="questionstyle"><strong><%="Question: #{@questions[index]}"%></strong></li>
+        <%if(@correct[index])%>
+            <li class="answerstyle"><%="#{@result[index]} is "%> <span class="correct">Correct</span></li> <br><br>
+        <%else%>
+            <li class="answerstyle"><%="#{@result[index]} is "%> <span class="incorrect">Incorrect</span></li> <br><br>
+        <%end%>
     <%end%>
 </ul>

@@ -26,6 +26,7 @@ class QuizQuestionsController < ApplicationController
 		# puts params
 		@result = []
 		@questions = []
+		@correct = []
 
 		$questions.each do |question| 
 
@@ -33,11 +34,13 @@ class QuizQuestionsController < ApplicationController
 			@answer = Question.find(params["question#{id}".to_sym]).answer
 			if @answer == params["q#{id}".to_sym]
 				@questions.push(Question.find(params["question#{id}".to_sym]).description)
-				@result.push(Question.find(params["question#{id}".to_sym])["option_#{params["q#{id}".to_sym]}"] + " is CORRECT")
+				@result.push(Question.find(params["question#{id}".to_sym])["option_#{params["q#{id}".to_sym]}"])
+				@correct.push(true)
 	
 			else
 				@questions.push(Question.find(params["question#{id}".to_sym]).description)
-				@result.push(Question.find(params["question#{id}".to_sym])["option_#{params["q#{id}".to_sym]}"] + " is INCORRECT")
+				@result.push(Question.find(params["question#{id}".to_sym])["option_#{params["q#{id}".to_sym]}"] )
+				@correct.push(false)
 			end
 		end
 	end
