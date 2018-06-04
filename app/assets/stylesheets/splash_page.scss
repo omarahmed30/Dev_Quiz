@@ -13,12 +13,12 @@ div#bluebackground {
   color: white;
 }
 #lightbluebackground {
-
   animation: fadeInBackground 2s forwards ease-in;
   padding: 20px;
 }
 .col-md-4 {
   padding: 30px;
+  margin-left: 65px !important;
 }
 .arrow {
   height: 90px;
@@ -154,6 +154,15 @@ footer {
   width: 100% !important;
   margin: 0px !important;
   padding: 0px !important;
+}
+.questionstyle {
+  color: white;
+  font-family: 'Iceland', cursive;
+  font-size: 1.9em;
+}
+.answerstyle {
+  color: #48eaff;
+  font-size: 1.5em;
 }
 //nav
 nav {

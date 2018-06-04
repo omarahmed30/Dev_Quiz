@@ -44,23 +44,12 @@
       <% end %>
       </form>
 
-      <%# return false below keeps the page from being reloaded. but I'm not sure. it's exactly what we need, since with it, the page advances BUT the answer from the first question also stays put even after clicking next.  
-      
-      ALSO right now, clicking the SUBMIT button on second slide takes you BACK TO quiz_questions index page. Not sure why. Next button works though. 
-      
-      next steps: 
-      1 stop the bugs. 
-      2 Be sure we're capturing input and relaying right/wrong answer correctly on the page. 
-      3 Give a badge when quiz is complete(so be able to KEEP COUNT somewhere then display that).Then maybe redirect to quiz cards page. %>
-      
       <h3><%= @v %><h3>
 
   <script>
     var slideIndex = 0;
 
     function carousel() {
- 
-
       let x = document.getElementsByClassName("mainquestion");
       for (let i = 0; i < x.length; i++) {
         x[i].style.display = "none";
@@ -68,12 +57,9 @@
       slideIndex++;
       if (slideIndex > x.length) {
         slideIndex = 1
-
       }
       x[slideIndex-1].style.display = "block";
     }
     carousel();
-  </script>
-      
-
+  </script>     
 </section>
