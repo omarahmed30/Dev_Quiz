@@ -26,8 +26,9 @@ class QuizQuestionsController < ApplicationController
 		# puts params
 		@result = []
 		@questions = []
-		@counter = 0
-		@total = []
+
+		@correct = []
+    
 		$questions.each do |question| 
 		 
 		
@@ -35,14 +36,17 @@ class QuizQuestionsController < ApplicationController
 			@answer = Question.find(params["question#{id}".to_sym]).answer
 			if (@answer == params["q#{id}".to_sym]) 
 				@questions.push(Question.find(params["question#{id}".to_sym]).description)
-				@result.push(Question.find(params["question#{id}".to_sym])["option_#{params["q#{id}".to_sym]}"] + " is CORRECT")
-				@counter = @counter + 1;
-			else 
+
+				@result.push(Question.find(params["question#{id}".to_sym])["option_#{params["q#{id}".to_sym]}"])
+				@correct.push(true)
+	
+			else
 				@questions.push(Question.find(params["question#{id}".to_sym]).description)
-				@result.push(Question.find(params["question#{id}".to_sym])["option_#{params["q#{id}".to_sym]}"] + " is INCORRECT")
+				@result.push(Question.find(params["question#{id}".to_sym])["option_#{params["q#{id}".to_sym]}"] )
+				@correct.push(false)
 			end
 		 
 		end
-		@result.push("you answered #{@counter} correct!")
+		
 	end
 end
