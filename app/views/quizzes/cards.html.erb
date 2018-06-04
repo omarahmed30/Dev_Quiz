@@ -1,9 +1,11 @@
  <%= stylesheet_link_tag "splash_page" %>
 	<div class="container">				
-			<h3 class="h3larger">Select a language and difficulty:</h3>
+			<h3 class="h3larger">Select a language and difficulty</h3>
 			<div class="row cards-rows">
 				<div class="col">
-					<%= image_tag("html.png", class: "img-thumbnail") %>						
+				
+					<%= image_tag("html.png", class: "img-thumbnail") %> 
+									
 						<p class="h2sansanimation">HTML
 							<ul>
 							<li class="begadv">
@@ -20,10 +22,10 @@
 						<p class="h2sansanimation">CSS
 							<ul>
 							<li class="begadv">
-								<h4><%= link_to "Beginner", quiz_settings_path(:subject => "css", :difficulty => 1) %></h4>
+								<p><%= link_to "Beginner", quiz_settings_path(:subject => "css", :difficulty => 1) %></p>
 							</li>
 							<li class="begadv">
-								<h4><%= link_to "Advanced", quiz_settings_path(:subject => "css", :difficulty => 2) %> </h4>
+								<p><%= link_to "Advanced", quiz_settings_path(:subject => "css", :difficulty => 2) %> </p>
 							</li>
 							</ul>
 						</p>
