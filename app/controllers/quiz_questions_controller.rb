@@ -30,53 +30,7 @@ class QuizQuestionsController < ApplicationController
     def destroy
 	end
 	
-	# def html_easy
-	# 	$subject = "html"
-	# 	$difficulty = 1
-	# 	redirect_to '/quiz_questions/'
-	# end
 
-	# def html_hard
-	# 	@subject = "html"
-	# 	@difficulty = 2
-	# 	redirect_to '/quiz_questions/'
-	# end
-
-	# def css_easy
-	# 	@subject = "css"
-	# 	@difficulty = 1
-	# 	redirect_to '/quiz_questions/'
-	# end
-
-	# def css_hard
-	# 	@subject = "css"
-	# 	@difficulty = 2
-	# 	redirect_to '/quiz_questions/'
-	# end
-
-	# def javascript_easy
-	# 	@subject = "javascript"
-	# 	@difficulty = 1
-	# 	redirect_to '/quiz_questions/'
-	# end
-
-	# def javascript_hard
-	# 	@subject = "javascript"
-	# 	@difficulty = 2
-	# 	redirect_to '/quiz_questions/'
-	# end
-
-	# def ruby_easy
-	# 	@subject = "ruby"
-	# 	@difficulty = 1
-	# 	redirect_to '/quiz_questions/'
-	# end
-
-	# def ruby_hard
-	# 	@subject = "ruby"
-	# 	@difficulty = 2
-	# 	redirect_to '/quiz_questions/'
-	# end
 
 	def validate
 		# puts params
