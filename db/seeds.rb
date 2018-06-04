@@ -144,7 +144,7 @@ Question.create(description:"How do you create links to sections within the same
 
 Question.create(description:"Can a single text link point to two different web pages?", option_1:"Yes", option_2:"No", option_3:"Under Some Circumstances", option_4:"Only if it is html5", answer:"No", subject:"html", difficulty:1)
 
-Question.create(description:"How do you create text on a webpage that will allow you to send an email when clicked?", option_1:"<a HREF=”mailto:youremailaddress”>text to be clicked</a>", option_2:"You can not do this with simple html", option_3:"<mail href=”mailto:youremailaddress.com”> Send Email </mail>", option_4:"A and C both", answer:1, subject:"html", difficulty:1)
+Question.create(description:"How do you create text on a webpage that will allow you to send an email when clicked?", option_1:"<a href=”mailto:youremailaddress”>text to be clicked</a>", option_2:"You can not do this with simple html", option_3:"<mail href=”mailto:youremailaddress.com”> Send Email </mail>", option_4:"A and C both", answer:1, subject:"html", difficulty:1)
 
 
 # html hard
