@@ -12,4 +12,5 @@
             <li class="answerstyle"><%="#{@result[index]} is "%> <span class="incorrect">Incorrect</span></li> <br><br>
         <%end%>
     <%end%>
+    <li class="gradestyle"><strong><%="You're score is #{@correct.count(true).to_f*100/@correct.size}%"%></strong></li>
 </ul>
