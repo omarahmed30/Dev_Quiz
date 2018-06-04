@@ -64,7 +64,9 @@ Question.create(description:" x = \"gnirts a si siht\"
     using the code above,
     set \"this is a string\" to new-string and print it to the screen", option_1:"new-string = x.flip(y)", option_2:"x.reverse = print", option_3:"new-string =  x.reverse", option_4:" new-string = x", answer:3 , subject:"ruby", difficulty:1)
 
+
 Question.create(description:"Find the even numbers in numbers 1-100 
+
     100.times do |num|
            ???
       puts num
