@@ -1,11 +1,11 @@
 <%= stylesheet_link_tag "splash_page" %>
 
-<h2>Answers you submited</h2>
+<h2>Answers you submitted</h2>
 
 <ul>
     
     <%@result.size.times do |index|%>
-        <li><strong><%="Question: #{@questions[index]}"%></strong>
-        <li><%=@result[index]%></li> <br><br>
+        <li class="questionstyle"><strong><%="Question: #{@questions[index]}"%></strong>
+        <li class="answerstyle"><%=@result[index]%></li> <br><br>
     <%end%>
 </ul>
