@@ -143,10 +143,11 @@ footer {
   text-align: center;
   padding: 20px;
   margin: 25px;
+  box-shadow: black 4px 4px 4px;
 }
 .cards-rows {
   width: 100% !important;
-  margin: 0px !important;
+  margin: 0px auto;
   padding: 0px !important;
 }
 .col {
@@ -207,7 +208,9 @@ nav {
   transition: .5s ease-in-out;
   cursor: pointer;
 }
-
+a:hover {
+  text-decoration: none;
+}
 .animated-icon1 span, .animated-icon3 span, .animated-icon4 span {
   display: block;
   position: absolute;
