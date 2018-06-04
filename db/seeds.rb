@@ -24,13 +24,13 @@ Question.create(description:"How do you add comments in css?", option_1:"[commen
 
 Question.create(description:"how would you center text?", option_1:"text center;", option_2:"center: text;", option_3:"text-align: center;", option_4:"text-center:on;", answer:3, subject:"css", difficulty:1)
 
-Question.create(description:"# is used to select what element", option_1:"class", option_2:"id", option_3:"form", option_4:"body", answer:2 , subject:"css", difficulty:1)
+Question.create(description:"# is used to select what element?", option_1:"class", option_2:"id", option_3:"form", option_4:"body", answer:2 , subject:"css", difficulty:1)
 
-Question.create(description:". is used to select what element", option_1:"class", option_2:"body", option_3:"footer", option_4:"all child elements", answer:1 , subject:"css", difficulty:1)
+Question.create(description:". is used to select what element?", option_1:"class", option_2:"body", option_3:"footer", option_4:"all child elements", answer:1 , subject:"css", difficulty:1)
 
 Question.create(description:" ; is needed... ", option_1:" at the end of each declaration", option_2:"at the end of each attribute ", option_3:"before all css code ", option_4:"before and after all brackets ", answer:1 , subject:"css", difficulty:1)
 
-Question.create(description:"css stands for ", option_1:"complex color system ", option_2:"complete code source", option_3:"cascading style sheet", option_4:"core code style", answer: 3 , subject:"css", difficulty:1)
+Question.create(description:"CSS stands for ", option_1:"complex color system ", option_2:"complete code source", option_3:"cascading style sheet", option_4:"core code style", answer: 3 , subject:"css", difficulty:1)
 
 
 
@@ -39,15 +39,15 @@ Question.create(description:"css stands for ", option_1:"complex color system ",
 # hard css questions
 Question.create(description:"Hex codes are", option_1:"binary code to control video formats", option_2:"creating hexagons with code  ", option_3:"a number system to display many possible color options ", option_4:" code divided into 6 separate folders", answer:3 , subject:"css", difficulty:2)
 
-Question.create(description:"what is a css framework", option_1:"a pre written set of code to easier implement commonly accepted css designs ", option_2:"all css code is a framework", option_3:"javascript written in a css file", option_4:"the ouster most element of a nested element", answer:1 , subject:"css", difficulty:2)
+Question.create(description:"What is a css framework", option_1:"a pre written set of code to easier implement commonly accepted css designs ", option_2:"all css code is a framework", option_3:"javascript written in a css file", option_4:"the ouster most element of a nested element", answer:1 , subject:"css", difficulty:2)
 
-Question.create(description:"how can multiple declarations be targeted at once?", option_1:"=", option_2:"*", option_3:";", option_4:"+", answer:3 , subject:"css", difficulty:2)
+Question.create(description:"How can multiple declarations be targeted at once?", option_1:"=", option_2:"*", option_3:";", option_4:"+", answer:3 , subject:"css", difficulty:2)
 
-Question.create(description:"what is not an element of the box model?", option_1:"margin", option_2:"border", option_3:"padding", option_4:"container", answer:4 , subject:"css", difficulty:2)
+Question.create(description:"What is not an element of the box model?", option_1:"margin", option_2:"border", option_3:"padding", option_4:"container", answer:4 , subject:"css", difficulty:2)
 
-Question.create(description:"what is the z index?", option_1:"a declaration specifying the position of overlapping elements", option_2:"sorts text by reverse alphabetical order ", option_3:"converts all numbers to a zero index system", option_4:"moves targeted element to bottom of the page", answer:1 , subject:"css", difficulty:2)
+Question.create(description:"What is the z index?", option_1:"a declaration specifying the position of overlapping elements", option_2:"sorts text by reverse alphabetical order ", option_3:"converts all numbers to a zero index system", option_4:"moves targeted element to bottom of the page", answer:1 , subject:"css", difficulty:2)
 
-Question.create(description:"when using a framework, your css link needs to be placed ________ the framework link", option_1:"before", option_2:"after", option_3:"in between", option_4:"on a separate page", answer:2 , subject:"css", difficulty:2)
+Question.create(description:"When using a framework, your css link needs to be placed ________ the framework link", option_1:"before", option_2:"after", option_3:"in between", option_4:"on a separate page", answer:2 , subject:"css", difficulty:2)
 
 
 
@@ -56,7 +56,7 @@ Question.create(description:"How do you create a method?", option_1:"def", optio
 
 Question.create(description:"What does concat do?", option_1:"adds numbers", option_2:"join together specified strings", option_3:"delete targeted strings", option_4:"reverse order", answer:2 , subject:"ruby", difficulty:1)
 
-Question.create(description:" x = \"gnirts a si siht\"
+Question.create(description:" x = \"gnirts a si siht\" 
     new-string = " "
         ?
     p new-string
@@ -64,20 +64,20 @@ Question.create(description:" x = \"gnirts a si siht\"
     using the code above,
     set \"this is a string\" to new-string and print it to the screen", option_1:"new-string = x.flip(y)", option_2:"x.reverse = print", option_3:"new-string =  x.reverse", option_4:" new-string = x", answer:3 , subject:"ruby", difficulty:1)
 
-Question.create(description:"find the even numbers in numbers 1-100 
+Question.create(description:"Find the even numbers in numbers 1-100 
     100.times do |num|
            ???
       puts num
     end", option_1:"num % 2 == 0 ", option_2:"100 --  ", option_3:"return numb.all-even
     ", option_4:"next if num % 2 == 0", answer:4 , subject:"ruby", difficulty:1)
 
-Question.create(description:" what is the difference between false and nil ", option_1:"they act the same ", option_2:"false can be a value, nil cannot be a value.", option_3:"nil is value, false is not a value", option_4:"nil is true and false is false", answer:2 , subject:"ruby", difficulty:1)
+Question.create(description:"What is the difference between false and nil? ", option_1:"they act the same ", option_2:"false can be a value, nil cannot be a value.", option_3:"nil is value, false is not a value", option_4:"nil is true and false is false", answer:2 , subject:"ruby", difficulty:1)
 
 
 
 
 # ruby hard questions
-Question.create(description:"what langauge syntax is simular to rubys syntax ", option_1:"javaScript", option_2:"html ", option_3:" css ", option_4:" python", answer:4 , subject:"ruby", difficulty:2)
+Question.create(description:"What langauge syntax is simular to rubys syntax?", option_1:"javaScript", option_2:"html ", option_3:" css ", option_4:" python", answer:4 , subject:"ruby", difficulty:2)
 
 Question.create(description:"What is the output of the given code?
     x= 1
@@ -96,20 +96,20 @@ Question.create(description:
         print \"not equal\"
     end", option_1:"equal", option_2:"not equal", option_3:"greater than", option_4:"less than ", answer:2 , subject:"ruby", difficulty:2)
 
-Question.create(description:"global varibles in ruby start with __ ", option_1:"$", option_2:"@", option_3:"@@", option_4:"**", answer:1 , subject:"ruby", difficulty:2)
+Question.create(description:"Global varibles in ruby start with __. ", option_1:"$", option_2:"@", option_3:"@@", option_4:"**", answer:1 , subject:"ruby", difficulty:2)
 
 
 
 
 # javascript easy
-Question.create(description:" _______ is values passed into a function when invoked ", option_1:"parameters", option_2:"arguments", option_3:"function", option_4:"value", answer:2 , subject:"javascript", difficulty:1)
+Question.create(description:" _______ is values passed into a function when invoked. ", option_1:"parameters", option_2:"arguments", option_3:"function", option_4:"value", answer:2 , subject:"javascript", difficulty:1)
 
 Question.create(description:
     " What is the output, “5” + 5 = ___", option_1:"\"55\"", option_2:"10 ", option_3:"55 ", option_4:"undefined ", answer:1 , subject:"javascript", difficulty:1)
 
 Question.create(description:"Everything not undefined, null, number, string or boolean is an ______ in javaScript", option_1:"object", option_2:"array", option_3:"function", option_4:"class", answer:1 , subject:"javascript", difficulty:1)
 
-Question.create(description:" javaScript was created by the founder of what company?", option_1:"google", option_2:"aol", option_3:"mozilla", option_4:"blockbuster", answer:3 , subject:"javascript", difficulty:1)
+Question.create(description:"JavaScript was created by the founder of what company?", option_1:"google", option_2:"aol", option_3:"mozilla", option_4:"blockbuster", answer:3 , subject:"javascript", difficulty:1)
 
 Question.create(description:"Which one of these is not a loop?", option_1:"for", option_2:"while", option_3:"before", option_4:"do", answer:3 , subject:"javascript", difficulty:1)
 
@@ -132,11 +132,11 @@ Question.create(description:"(function() {
  
  console.log(y); ", option_1:"x", option_2:"y", option_3:"0", option_4:"8", answer:4 , subject:"javascript", difficulty:2)
 
- Question.create(description:"a sorting method that compares adjacent items, swapping them if there in the wrong order is called ________", option_1:"binary sort", option_2:"insertion sort", option_3:"bubble sort", option_4:"linear sort", answer:3, subject:"javascript", difficulty:2)
+ Question.create(description:"A sorting method that compares adjacent items, swapping them if there in the wrong order is called ________.", option_1:"binary sort", option_2:"insertion sort", option_3:"bubble sort", option_4:"linear sort", answer:3, subject:"javascript", difficulty:2)
 
- Question.create(description:"a sorting method that divides, compares and divides again is called ", option_1:"merge sort", option_2:" insertion sort", option_3:"disection sort", option_4:"binary sort", answer:1, subject:"javascript", difficulty:2)
+ Question.create(description:"A sorting method that divides, compares and divides again is called _________. ", option_1:"merge sort", option_2:" insertion sort", option_3:"disection sort", option_4:"binary sort", answer:1, subject:"javascript", difficulty:2)
 
- Question.create(description:"a sorting method that goest through, finds the smallest number and places it first", option_1:"binary sort", option_2:"selection sort", option_3:"insertion sort", option_4:"bubble sort", answer:2, subject:"javascript", difficulty:2)
+ Question.create(description:"A sorting method that goes through, finds the smallest number and places it first is called __________.", option_1:"binary sort", option_2:"selection sort", option_3:"insertion sort", option_4:"bubble sort", answer:2, subject:"javascript", difficulty:2)
 
 
 # html easy
@@ -148,11 +148,11 @@ Question.create(description:"How do you create text on a webpage that will allow
 
 
 # html hard
-Question.create(description:"can you change only bullet point colors?", option_1:"yes", option_2:"no", option_3:"only on mobile devices", option_4:"not really", answer:1 , subject:"html", difficulty:2)
+Question.create(description:"Can you change only bullet point colors?", option_1:"yes", option_2:"no", option_3:"only on mobile devices", option_4:"not really", answer:1 , subject:"html", difficulty:2)
 
-Question.create(description:"what is a marquee", option_1:"a platform device for text", option_2:"a way to apply scrolling text", option_3:"a color system", option_4:"4d dropdowns", answer:2 , subject:"html", difficulty:2)
+Question.create(description:"What is a marquee?", option_1:"a platform device for text", option_2:"a way to apply scrolling text", option_3:"a color system", option_4:"4d dropdowns", answer:2 , subject:"html", difficulty:2)
 
-Question.create(description:"what tag is new to html5", option_1:"<p>", option_2:"<audio>", option_3:"<file>", option_4:"<section>", answer:2 ,subject:"html", difficulty:1)
+Question.create(description:"What tag is new to html5?", option_1:"<p>", option_2:"<audio>", option_3:"<file>", option_4:"<section>", answer:2 ,subject:"html", difficulty:1)
 
 # Question.create(description:"what is html5 session storage", option_1:"stores data of current session and then deleted", option_2:" ", option_3:" ", option_4:" ", answer: , subject:"html", difficulty:1)
 
