@@ -1,19 +1,6 @@
-<h1>Quiz Questions FIZAL</h1>
+<%= stylesheet_link_tag "splash_page" %>
 
-<% if signed_in? %>
-  Signed in as: <%= current_user.email %>
-  <%= button_to 'Sign out', sign_out_path, method: :delete %>
-<% else %>
-  <%= link_to 'Sign in', sign_in_path %>
-<% end %>
-
-<div id="flash">
-  <% flash.each do |key, value| %>
-    <div class="flash <%= key %>"><%= value %></div>
-  <% end %>
-</div>
-
-
+<h1>Quiz Questions</h1>
 
 <section class="questionslideshow"> 
   <form action="/quiz_questions/validate" method="post" >
@@ -45,33 +32,24 @@
           <li>
               <input name=<%="question#{question.id}"%> type="hidden" value=<%=question.id%>
           </li>
-
           
         <% if $questions.last.id == question.id %>
           <button>Submit </button> 
-          <% end %>
+        <%else%>
+          <button onclick="carousel(); return false;"> Next </button>
+        <% end %>
             
         </ul>
       </div>
       <% end %>
       </form>
-      <button onclick="carousel(); return false;"> Next </button>
-      <%# return false below keeps the page from being reloaded. but I'm not sure. it's exactly what we need, since with it, the page advances BUT the answer from the first question also stays put even after clicking next.  
-      
-      ALSO right now, clicking the SUBMIT button on second slide takes you BACK TO quiz_questions index page. Not sure why. Next button works though. 
-      
-      next steps: 
-      1 stop the bugs. 
-      2 Be sure we're capturing input and relaying right/wrong answer correctly on the page. 
-      3 Give a badge when quiz is complete(so be able to KEEP COUNT somewhere then display that).Then maybe redirect to quiz cards page. %>
-      
+
       <h3><%= @v %><h3>
 
   <script>
     var slideIndex = 0;
 
     function carousel() {
-
       let x = document.getElementsByClassName("mainquestion");
       for (let i = 0; i < x.length; i++) {
         x[i].style.display = "none";
@@ -79,12 +57,9 @@
       slideIndex++;
       if (slideIndex > x.length) {
         slideIndex = 1
-
       }
       x[slideIndex-1].style.display = "block";
     }
     carousel();
-  </script>
-      
-
+  </script>     
 </section>

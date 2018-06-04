@@ -34,9 +34,6 @@ Rails.application.routes.draw do
 
   root 'splash_page#splash_page'
 
-
-
   get'/quiz_questions/html_easy', to: "quiz_questions#html_easy", as: "html_easy"
-
 
 end
