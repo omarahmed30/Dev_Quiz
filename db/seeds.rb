@@ -64,9 +64,7 @@ Question.create(description:" x = \"gnirts a si siht\"
     using the code above,
     set \"this is a string\" to new-string and print it to the screen", option_1:"new-string = x.flip(y)", option_2:"x.reverse = print", option_3:"new-string =  x.reverse", option_4:" new-string = x", answer:3 , subject:"ruby", difficulty:1)
 
-
 Question.create(description:"Find the even numbers in numbers 1-100 
-
     100.times do |num|
            ???
       puts num
@@ -154,7 +152,11 @@ Question.create(description:"Can you change only bullet point colors?", option_1
 
 Question.create(description:"What is a marquee?", option_1:"a platform device for text", option_2:"a way to apply scrolling text", option_3:"a color system", option_4:"4d dropdowns", answer:2 , subject:"html", difficulty:2)
 
+<<<<<<< HEAD
+Question.create(description:"What tag is new to html5 ?", option_1:"<p>", option_2:"<audio>", option_3:"<file>", option_4:"<section>", answer:2 ,subject:"html", difficulty:1)
+=======
 Question.create(description:"What tag is new to html5?", option_1:"<p>", option_2:"<audio>", option_3:"<file>", option_4:"<section>", answer:2 ,subject:"html", difficulty:1)
+>>>>>>> 124ea671f760e18e5a9bce61b7405ea29602ddb5
 
 # Question.create(description:"what is html5 session storage", option_1:"stores data of current session and then deleted", option_2:" ", option_3:" ", option_4:" ", answer: , subject:"html", difficulty:1)
 
