@@ -43,6 +43,7 @@ class QuizzesController < ApplicationController
             else
                 @v.push(Question.find(params["question#{counter}".to_sym])["option_#{params["option#{counter}".to_sym]}"] + " is incorrect")
             end
+            
         end
 
 
