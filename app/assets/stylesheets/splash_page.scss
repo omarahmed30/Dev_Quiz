@@ -210,13 +210,21 @@ nav {
 .nav-link, .nav-item {
   color: white;
   list-style: none;
-  margin: 0px;
+  margin-left: 45px;
   padding: 5px;
   line-height: 0.8em;
 }
 .nav-link:hover {
   color: white !important;
   text-shadow: black 1px 1px 1px;
+}
+.navlogo {
+  width: 40px;
+  margin-top: 10px;
+}
+.navleft {
+  list-style-type: none;
+  display: inline-block;
 }
 // nav bar animations from bootstrap
 .animated-icon1, .animated-icon2, .animated-icon3, .animated-icon4 {
