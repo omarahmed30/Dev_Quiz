@@ -40,8 +40,10 @@ class QuizzesController < ApplicationController
             if @answer == params["option#{counter}".to_sym]
                 @v.push(Question.find(params["question#{counter}".to_sym])["option_#{params["option#{counter}".to_sym]}"] + " is Correct")
     
-            else
+            elsif
                 @v.push(Question.find(params["question#{counter}".to_sym])["option_#{params["option#{counter}".to_sym]}"] + " is incorrect")
+            else nil
+                @v.push("Forgot to answer some questions")
             end
         end
 

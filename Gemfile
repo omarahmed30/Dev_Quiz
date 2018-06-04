@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
 gem 'clearance'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
@@ -68,3 +71,4 @@ git: "https://github.com/bootstrap-ruby/bootstrap_form.git",
 
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
+

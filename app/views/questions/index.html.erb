@@ -47,22 +47,22 @@
         <ul>
           <li>  
             <label class="radio-inline">
-              <input type="radio" name=<%="option#{question.id}"%> value=1 >  <%= question.option_1 %>
+              <input type="radio" name=<%="option#{question.id}"%> value=1 required>  <%= question.option_1 %>
             </label>
           </li>
           <li>
             <label class="radio-inline">
-              <input type="radio" name=<%="option#{question.id}"%> value=2 > <%= question.option_2 %>
+              <input type="radio" name=<%="option#{question.id}"%> value=2 required > <%= question.option_2 %>
             </label>
           </li>
           <li>
             <label class="radio-inline">
-              <input type="radio" name=<%="option#{question.id}"%> value=3> <%= question.option_3 %>
+              <input type="radio" name=<%="option#{question.id}"%> value=3 required> <%= question.option_3 %>
             </label>
           </li>
           <li>
             <label class="radio-inline">
-              <input type="radio" name=<%="option#{question.id}"%> value=4 > <%= question.option_4 %>
+              <input type="radio" name=<%="option#{question.id}"%> value=4 required> <%= question.option_4 %>
             </label>
           </li>
 
@@ -79,11 +79,13 @@
 
     </div>
 
+   <center>
     <footer> 
       <%= image_tag "dev-quiz-logo.png", class: "logofooter"%>
       <p><strong>Take the Quiz, Ace the Interview. Repeat.</strong><br>
       Dev Quiz is a web/mobile app designed for computer science majors and web developer bootcamp grads who are preparing for technical interviews. Created by New York Code &amp; Deisgn Academy Grads. Head to our <a href="">Dev Quiz Github</a> for all info.</p>
     </footer>
+    </center>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"></script>
