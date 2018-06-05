@@ -37,11 +37,11 @@ Question.create(description:"CSS stands for ", option_1:"complex color system ",
 
 
 # hard css questions
-Question.create(description:"Hex codes are", option_1:"binary code to control video formats", option_2:"creating hexagons with code  ", option_3:"a number system to display many possible color options ", option_4:" code divided into 6 separate folders", answer:3 , subject:"css", difficulty:2)
+# Question.create(description:"Hex codes are", option_1:"binary code to control video formats", option_2:"creating hexagons with code  ", option_3:"a number system to display many possible color options ", option_4:" code divided into 6 separate folders", answer:3 , subject:"css", difficulty:2)
 
 Question.create(description:"What is a css framework", option_1:"a pre written set of code to easier implement commonly accepted css designs ", option_2:"all css code is a framework", option_3:"javascript written in a css file", option_4:"the ouster most element of a nested element", answer:1 , subject:"css", difficulty:2)
 
-Question.create(description:"How can multiple declarations be targeted at once?", option_1:"=", option_2:"*", option_3:";", option_4:"+", answer:3 , subject:"css", difficulty:2)
+# Question.create(description:"How can multiple declarations be targeted at once?", option_1:"=", option_2:"*", option_3:";", option_4:"+", answer:3 , subject:"css", difficulty:2)
 
 Question.create(description:"What is not an element of the box model?", option_1:"margin", option_2:"border", option_3:"padding", option_4:"container", answer:4 , subject:"css", difficulty:2)
 
@@ -126,11 +126,11 @@ Question.create(description:"What is the difference between == and === ?", optio
 # Question.create(description:"", option_1:"", option_2:"", option_3:"", option_4:"", answer:, subject:"javascript", difficulty:2)
 
 # javascript hard
-Question.create(description:"(function() {
+Question.create(description:" What is the output of y? function equals() {
     var x = y = 8;
- })();
- 
- console.log(y); ", option_1:"x", option_2:"y", option_3:"0", option_4:"8", answer:4 , subject:"javascript", difficulty:2)
+    return y;
+ };
+ console.log(equals()); ", option_1:"x", option_2:"y", option_3:"0", option_4:"8", answer:4 , subject:"javascript", difficulty:2)
 
  Question.create(description:"A sorting method that compares adjacent items, swapping them if there in the wrong order is called ________.", option_1:"binary sort", option_2:"insertion sort", option_3:"bubble sort", option_4:"linear sort", answer:3, subject:"javascript", difficulty:2)
 
