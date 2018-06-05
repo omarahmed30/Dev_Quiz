@@ -2,51 +2,52 @@
 	<div class="container">				
 		<h3 class="h3larger">Select a language and difficulty</h3>
 		<div class="row cards-rows">
-			<div class="col">
+			<div class="col-lg-6 col-centered center-block">
 			
-				<%= image_tag("html.png", class: "img-thumbnail") %> 
-								
-					<p class="h2sansanimation">HTML
+				<div><%= image_tag("html.png", class: "img-thumbnail") %></div>
+				<p class="h2sansanimation">HTML</p>
 						<ul>
 						<li class="begadv">
-							<p><%= link_to "Beginner", quiz_settings_path(:subject => "html", :difficulty => 1) %></p>
+							<p class="hoverbright"><%= link_to "Beginner", quiz_settings_path(:subject => "html", :difficulty => 1) %></p>
 						</li>
 						<li class="begadv">
-							<p><%= link_to "Advanced", quiz_settings_path(:subject => "html", :difficulty => 2) %></p>
+							<p class="hoverbright"><%= link_to "Advanced", quiz_settings_path(:subject => "html", :difficulty => 2) %></p>
 						</li>
 						</ul>
 					</p>
 			</div>
-			<div class="col">					
-					<%= image_tag("css.svg", class: "img-thumbnail") %>
-					<p class="h2sansanimation">CSS
+
+			<div class="col-lg-6 col-centered center-block">					
+				<div><%= image_tag("css.svg", class: "img-thumbnail") %></div>
+					<p class="h2sansanimation">CSS</p>
 						<ul>
 						<li class="begadv">
-							<p><%= link_to "Beginner", quiz_settings_path(:subject => "css", :difficulty => 1) %></p>
+							<p class="hoverbright"><%= link_to "Beginner", quiz_settings_path(:subject => "css", :difficulty => 1) %></p>
 						</li>
 						<li class="begadv">
-							<p><%= link_to "Advanced", quiz_settings_path(:subject => "css", :difficulty => 2) %> </p>
+							<p class="hoverbright"><%= link_to "Advanced", quiz_settings_path(:subject => "css", :difficulty => 2) %> </p>
 						</li>
 						</ul>
-					</p>
-				</div>
+			</div>
 		</div>
+	</div>
+	<div class="container">
 		<div class="row cards-rows">
-			<div class="col">
-						<%= image_tag("javascript_logo.svg", class: "img-thumbnail") %>
+			<div class="col-md cards-col">
+						<%= image_tag("javascript_logo.svg", class: "img-thumbnail") %><br>
 				<p class="h2sansanimation">JavaScript
 					<ul>
 						<li class="begadv">
-							<p><%= link_to "Beginner", quiz_settings_path(:subject => "javascript", :difficulty => 1) %></p>
+							<p class="hoverbright"><%= link_to "Beginner", quiz_settings_path(:subject => "javascript", :difficulty => 1) %></p>
 						</li>
 						<li class="begadv">
-							<p><%= link_to "Advanced", quiz_settings_path(:subject => "javascript", :difficulty => 2) %></p>
+							<p class="hoverbright"><%= link_to "Advanced", quiz_settings_path(:subject => "javascript", :difficulty => 2) %></p>
 						</li>
 					</ul>
 				</p>
 			</div>
-			<div class="col">
-					<%= image_tag("ruby.png", class: "img-thumbnail") %>					
+			<div class="col-md cards-col">
+					<%= image_tag("ruby.png", class: "img-thumbnail") %><br>					
 					<p class="h2sansanimation">Ruby
 						<ul>
 						<li class="begadv">

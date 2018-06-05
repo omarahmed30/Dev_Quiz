@@ -1,25 +1,17 @@
 // Place all the styles related to the QuizQuestions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-
-footer div { 
-    background-color:#0B0A58 !important;
-    padding: 5px;
-
-}
-
-body, footer { 
-    background-color: #0B0A58 !important;
-    
-}
-
-h1, .mainquestion { 
-    
+// footer div { 
+//     background-color:#0B0A58 !important;
+//     padding: 5px;
+// }
+// body, footer { 
+//     background-color: #0B0A58 !important; 
+// }
+h1, .mainquestion {    
     border: 2px solid #0E4D92;
     background-color: #32A9B8;
 }
-
 h2 { 
     text-align: center;
 }
