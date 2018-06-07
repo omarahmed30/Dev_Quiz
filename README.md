@@ -27,11 +27,25 @@ https://devquizz.herokuapp.com
 
 
 
-Database uses seed file to create questions. We intend to advance qeution complexity of advanced questions and hit the target of questions asked most often in technical interviews as well. 
+Database uses seed file to create questions. Our intention is to add more advance qeustions with relevent complexity which is  asked most often in technical interviews as well. 
+
+## Getting Started
+* Clone or fork the repository to your local computer.
+* Follow these commands
+
+* `rails db:drop`
+* `rails db:create`
+* `rails db:schema:load`
+* `Rails db:seed`
+
+Finally
+* ` rails s`
+
+Enjoy the quiz now on localhost:3000 on your web browser
 
 ## Team members:
 
-Omar Ahmed, Cat Perry, Minhal Gardezi, and Kevin Hesse; please take a look at the contributions to learn more about each of us. See a demo of it here (recorderd using Loom):
+(https://www.google.com "Omar Ahmed"), Cat Perry, Minhal Gardezi, and Kevin Hesse; please take a look at the contributions to learn more about each of us. See a demo of it here (recorderd using Loom):
 
 ## Video demo link for our app
 https://www.useloom.com/share/8dfe58937d324228b67fe239d6f06d06
