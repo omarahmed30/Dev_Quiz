@@ -1,9 +1,12 @@
-# README
+# Dev Quiz
 
-An MVP (minimal viable product) of a quiz application suited for web and mobile. Dev quiz's aim is to pose multiple choice questions that help users practice both basic and advanced fundamental knowledge of four lenguages: HTML, CSS, JavaScript, and Ruby. 
+A quiz application suited for web and mobile. Dev quiz's aim is to pose multiple choice questions that help users practice both basic and advanced fundamental knowledge of four lenguages: HTML, CSS, JavaScript, and Ruby. 
 
-Problem it's solving: 
-Create a quiz app using Rails, without scaffolding, that uses relational databases and javascript to quiz users in a multiple choice format on common coding knowledge and typical technical interview questions.
+## What problem is it solving: 
+This app helps bootcamp and college graduate with CS degree to get ready for a technical job interview. It is multiple choice quiz which engages users and help them expand their knowledge about programing languages of their choice. 
+
+## Link to the blog website
+https://devquizz.herokuapp.com
 
 Technologies used: 
 Ruby on Rails
