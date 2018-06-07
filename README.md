@@ -45,7 +45,7 @@ Enjoy the quiz now on localhost:3000 on your web browser
 
 ## Team members:
 
-(https://www.google.com "Omar Ahmed"), Cat Perry, Minhal Gardezi, and Kevin Hesse; please take a look at the contributions to learn more about each of us. See a demo of it here (recorderd using Loom):
+[Minhal Gardezi](https://github.com/mag166), [Cat Perry](https://github.com/CatPerry) Cat Perry, [Keven Hesse](https://github.com/kevinhesse), and [Omar Ahmed](https://github.com/omarahmed30); please take a look at the contributions to learn more about each of us. See a demo of it here (recorderd using Loom):
 
 ## Video demo link for our app
 https://www.useloom.com/share/8dfe58937d324228b67fe239d6f06d06
