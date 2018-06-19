@@ -36,7 +36,7 @@ Database uses seed file to create questions. Our intention is to add more advanc
 * `rails db:drop`
 * `rails db:create`
 * `rails db:schema:load`
-* `Rails db:seed`
+* `rails db:seed`
 
 Finally
 * ` rails s`
