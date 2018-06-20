@@ -1,6 +1,6 @@
 # Dev Quiz
 
-A quiz application suited for web and mobile. Dev quiz's aim is to pose multiple choice questions that help users practice both basic and advanced fundamental knowledge of four lenguages: HTML, CSS, JavaScript, and Ruby. 
+A quiz application suited for web and mobile. Dev quiz's aim is to pose multiple choice questions that help users practice both basic and advanced fundamental knowledge of four languages: HTML, CSS, JavaScript, and Ruby. 
 
 ## What problem is it solving?
 This app helps bootcamp and college graduate with CS degree to get ready for a technical job interview. It is multiple choice quiz which engages users and help them expand their knowledge about programing languages of their choice. 
