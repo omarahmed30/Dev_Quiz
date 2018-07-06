@@ -1,5 +1,5 @@
 # Dev Quiz
-
+<img width="1269" alt="screen shot 2018-07-06 at 10 53 14 am" src="https://user-images.githubusercontent.com/26211014/42385473-de6ec392-810a-11e8-881a-efbf4f7eb733.png">
 A quiz application suited for web and mobile. Dev quiz's aim is to pose multiple choice questions that help users practice both basic and advanced fundamental knowledge of four languages: HTML, CSS, JavaScript, and Ruby. 
 
 ## What problem is it solving?
